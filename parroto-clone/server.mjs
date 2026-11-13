@@ -91,8 +91,34 @@ async function handleNextImage(req, res, url) {
   await sendFile(req, res, target, { rewrite: false });
 }
 
+const BLOCKED_BILLING_PAGE_RE = /^\/(?:[a-z]{2}\/)?(?:pricing|checkout|activation|affiliate)(?:\/|$)/i;
+const BLOCKED_BILLING_DATA_RE = /^\/_next\/data\/[^/]+\/(?:[a-z]{2}\/)?(?:pricing|checkout|activation|affiliate)\.json$/i;
+const BLOCKED_BILLING_API_PREFIXES = [
+  "/api/prices",
+  "/api/promo/active",
+  "/api/affiliate",
+  "/api/orders",
+  "/api/payment",
+  "/api/activation"
+];
+
 async function handleApi(req, res, url) {
   const method = req.method ?? "GET";
+  if (BLOCKED_BILLING_API_PREFIXES.some((prefix) => url.pathname === prefix || url.pathname.startsWith(prefix + "/"))) {
+    const payload = Buffer.from(JSON.stringify({ data: [] }));
+    res.writeHead(200, {
+      "content-type": "application/json; charset=utf-8",
+      "content-length": payload.length,
+      "cache-control": MUTABLE_CACHE,
+      "access-control-allow-origin": "*"
+    });
+    if (method === "HEAD") {
+      res.end();
+      return;
+    }
+    res.end(payload);
+    return;
+  }
   const entry = resolveApiFixture(apiManifest, method, url.pathname, url.search) ?? resolveApiFallbackPath(API_DIR, url.pathname);
   if (!entry) {
     const payload = Buffer.from(JSON.stringify({ error: "endpoint not captured" }));
@@ -104,7 +130,8 @@ async function handleApi(req, res, url) {
     res.end(payload);
     return;
   }
-  const payload = await fsp.readFile(entry.file);
+  const raw = await fsp.readFile(entry.file, "utf8");
+  const payload = Buffer.from(rewriteBody(raw), "utf8");
   res.writeHead(entry.status, {
     "content-type": "application/json; charset=utf-8",
     "content-length": payload.length,
@@ -145,6 +172,22 @@ async function handleOriginFallback(req, res, url) {
 const server = http.createServer(async (req, res) => {
   try {
     const url = new URL(req.url ?? "/", `http://localhost:${PORT}`);
+
+    if (BLOCKED_BILLING_DATA_RE.test(url.pathname)) {
+      const payload = Buffer.from(JSON.stringify({ pageProps: { __N_REDIRECT: "/", __N_REDIRECT_STATUS: 307 }, __N_SSP: true }));
+      res.writeHead(200, {
+        "content-type": "application/json; charset=utf-8",
+        "content-length": payload.length,
+        "cache-control": MUTABLE_CACHE
+      });
+      res.end(payload);
+      return;
+    }
+    if (BLOCKED_BILLING_PAGE_RE.test(url.pathname)) {
+      res.writeHead(302, { Location: "/", "cache-control": MUTABLE_CACHE });
+      res.end();
+      return;
+    }
 
     if (url.pathname === "/cdn-cgi/rum") {
       res.writeHead(204);

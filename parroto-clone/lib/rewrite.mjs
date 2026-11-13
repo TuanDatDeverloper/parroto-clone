@@ -10,8 +10,8 @@ const TEXT_REWRITES = [
   ["PARROTO COMPANY LIMITED", "TuanDat"],
   ["PARROTO CO., LTD.", "TuanDat"],
   ["Parroto", "TuanDat"],
-  ["/favicon/96x96.png\"", "/favicon/96x96.png?v=tuandat6\""],
-  ["/assets/images/favicon/logo.png\"", "/assets/images/favicon/logo.png?v=tuandat6\""]
+  ["/favicon/96x96.png\"", "/favicon/96x96.png?v=tuandat7\""],
+  ["/assets/images/favicon/logo.png\"", "/assets/images/favicon/logo.png?v=tuandat7\""]
 ];
 
 const NEW_LOGO_IMAGE_MARKUP =
@@ -98,6 +98,27 @@ function stripExternalHtmlBlocks(text) {
       ""
     );
   }
+  if (result.includes("/pricing") || result.includes("/affiliate")) {
+    result = result.replace(/<a[^>]*href="\/(?:[a-z]{2}\/)?(?:pricing|affiliate)"[^>]*>[\s\S]*?<\/a>/g, "");
+  }
+  if (result.includes("bg-gradient-pro")) {
+    result = result.replace(/<span[^>]*bg-gradient-pro[^>]*>[\s\S]*?<\/span>/g, "");
+  }
+  if (result.includes("border-yellow-300")) {
+    result = result.replace(/<span data-slot="badge"[^>]*border-yellow-300[^>]*>[\s\S]*?<\/span><\/span><\/span>/g, "");
+  }
+  if (result.includes("border-yellow-400")) {
+    result = result.replace(
+      /border-yellow-400 dark:border-yellow-500 shadow-\[0_4px_0_0_rgb\(161,98,7\)\] dark:shadow-\[0_4px_0_0_rgb\(120,53,15\)\] bg-gradient-to-br from-yellow-50 via-orange-50 to-yellow-50 dark:from-yellow-950 dark:via-orange-950 dark:to-yellow-950/g,
+      "border-border shadow-duo bg-card hover:border-primary/40"
+    );
+  }
+  if (result.includes("text-yellow-700")) {
+    result = result.replace(
+      /text-yellow-700 dark:text-yellow-300 group-hover:text-yellow-800 dark:group-hover:text-yellow-200/g,
+      "text-foreground group-hover:text-primary"
+    );
+  }
   return result;
 }
 
@@ -105,6 +126,8 @@ export function rewriteBody(bodyText) {
   let result = bodyText;
   result = stripExternalHtmlBlocks(result);
   result = replaceInlineLogoSvg(result);
+  result = result.replaceAll('"is_pro":true', '"is_pro":false');
+  result = result.replaceAll('"is_free":false', '"is_free":true');
   for (const [from, to] of ORIGIN_REWRITES) {
     if (result.includes(from)) {
       result = result.split(from).join(to);
@@ -116,7 +139,7 @@ export function rewriteBody(bodyText) {
     }
   }
   if (result.includes("/_next/static/")) {
-    result = result.replace(/(src|href)="(\/_next\/static\/[^"?]+\.(?:js|css))"/g, '$1="$2?v=tuandat6"');
+    result = result.replace(/(src|href)="(\/_next\/static\/[^"?]+\.(?:js|css))(?:\?v=[^"]*)?"/g, '$1="$2?v=tuandat7"');
   }
   return result;
 }
