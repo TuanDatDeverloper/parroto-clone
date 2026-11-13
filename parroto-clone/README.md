@@ -1,29 +1,30 @@
-# Parroto Clone
+# TuanDat (Parroto Clone — Bản phục vụ miễn phí 100%)
 
-Bản sao tĩnh 1:1 của [https://parroto.app](https://parroto.app) — dựng lại toàn bộ website (đa ngôn ngữ, blog, khoá học, trò chơi, đề thi) thành một site tự chạy được trên máy, không cần build lại mã nguồn Next.js.
+Bản tự host đa ngôn ngữ (khoá học, nghe chép chính tả, truyện chêm, trò chơi từ vựng, đề thi IELTS/TOEIC, blog) được tuỳ chỉnh từ bản mirror tĩnh để chạy độc lập trên máy và mở khóa hoàn toàn miễn phí cho tất cả người dùng.
 
 ## Kiến trúc
 
 ```
 parroto-clone/
-├── public/              # toàn bộ site đã mirror (HTML, JS, CSS, ảnh, font, dữ liệu)
-│   ├── _next/           # bundle Next.js + data payload từng trang/ngôn ngữ
-│   ├── blog/            # site Astro độc lập (bài viết, asset _astro)
-│   ├── assets/          # ảnh lấy từ assets.parroto.app
-│   ├── api/             # fixture JSON của API (kèm mã trạng thái gốc)
-│   └── **/*.html        # từng route của site
-├── server.mjs           # HTTP server, rewrite origin và phục vụ fixture
+├── public/                 # toàn bộ site (HTML, JS, CSS, ảnh, font, dữ liệu)
+│   ├── _next/              # bundle Next.js + data payload từng trang/ngôn ngữ
+│   ├── blog/               # site Astro độc lập (bài viết, asset _astro)
+│   ├── assets/             # ảnh, logo/mascot TuanDat và tài nguyên cục bộ
+│   ├── api/                # fixture JSON của API (kèm mã trạng thái)
+│   └── **/*.html           # từng route của site
+├── server.mjs              # HTTP server, chuyển hướng route thanh toán, rewrite và phục vụ fixture
 ├── lib/
-│   ├── rewrite.mjs      # đổi URL tuyệt đối của parroto.app về đường dẫn nội bộ
-│   ├── api-fixtures.mjs # tra fixture theo method + path + query
+│   ├── rewrite.mjs         # đổi URL, thương hiệu, lọc HTML Pro/app-download/social và mở khóa is_pro
+│   ├── api-fixtures.mjs    # tra fixture theo method + path + query
 │   ├── origin-fallback.mjs # tải và cache route chưa mirror từ origin
-│   └── mime.mjs         # content-type
+│   └── mime.mjs            # content-type
 ├── scripts/
-│   ├── inventory.mjs    # lập danh mục route từ sitemap + _buildManifest
-│   ├── mirror.mjs       # mirror HTML và tài nguyên
-│   ├── mirror-data.mjs  # tải _next/data payload thật cho từng route/ngôn ngữ
-│   └── verify.mjs       # kiểm tra toàn bộ route trên server nội bộ
-└── data/                # danh mục route, báo cáo mirror, kết quả kiểm tra
+│   ├── inventory.mjs       # lập danh mục route từ sitemap + _buildManifest
+│   ├── mirror.mjs          # mirror HTML và tài nguyên
+│   ├── mirror-data.mjs     # tải _next/data payload thật cho từng route/ngôn ngữ
+│   └── verify.mjs          # kiểm tra toàn bộ route trên server nội bộ
+├── data/                   # danh mục route, báo cáo mirror, kết quả kiểm tra
+└── PROGRESS.md             # nhật ký chi tiết các hạng mục đã tuỳ chỉnh
 ```
 
 ## Chạy
@@ -32,13 +33,25 @@ parroto-clone/
 node server.mjs --port=4173
 ```
 
-Mở http://127.0.0.1:4173.
+Mở http://127.0.0.1:4173 (hoặc chạy `npm run serve`).
 
-## Quy mô bản mirror
+## Các tuỳ chỉnh đã thực hiện
+
+Xem chi tiết từng file tại [PROGRESS.md](./PROGRESS.md):
+
+- **Thương hiệu & giao diện `TuanDat`**: Thay toàn bộ logo, favicon, tên thương hiệu thành `TuanDat` và thay mascot cũ bằng chim cánh cụt `/assets/images/penguin-mascot.png`.
+- **Phục vụ miễn phí 100% (gỡ Pro & thanh toán)**:
+  - Chặn và chuyển hướng `302` về `/` (kèm redirect `_next/data`) cho `/pricing`, `/checkout`, `/activation`, `/affiliate` (và các route đa ngôn ngữ tương ứng); xóa các trang HTML tĩnh của chúng.
+  - Làm rỗng API gói/khuyến mãi/giới thiệu (`/api/prices`, `/api/promo/active`, `/api/affiliate`, `/api/orders`, `/api/payment`, `/api/activation`) và chuẩn hóa `"is_pro":false`, `"is_free":true` trên API lẫn SSR HTML.
+  - Gỡ bỏ toàn bộ nút `PRO` / `Unlock Pro`, liên kết `/pricing` và `/affiliate` trên header/sidebar/profile, các modal thanh toán/yêu cầu nâng cấp (`CheckoutModal`, `PremiumRequiredModal`, `ThankYouModal`, `EventPromoModal`), quảng cáo (`GoogleAdsLoader`), huy hiệu `ProBadge`, vương miện Pro trên avatar và các banner giới hạn Free/Pro.
+  - Mở khóa miễn phí toàn bộ bài học dictation/shadowing, truyện chêm, đề thi IELTS/TOEIC, bộ từ vựng, trò chơi, tạo bài học YouTube và nâng tối đa hạn mức sổ tay/từ vựng cá nhân.
+- **Dọn liên kết ngoài**: Gỡ bỏ toàn bộ banner/QR tải app di động, video quảng bá ngoài, nút Facebook Community và liên kết mạng xã hội ngoài.
+
+## Quy mô bản mirror gốc
 
 | Hạng mục | Số lượng |
 | --- | --- |
-| Route HTML | 6.441 (static 680, app 289, sitemap 3.910, blog 1.562) |
+| Route HTML gốc | 6.441 (static 680, app 289, sitemap 3.910, blog 1.562; đã xóa trang pricing/checkout/activation/affiliate) |
 | Ngôn ngữ | 17 (en, ar, de, el, es, id, ja, ko, ms, pt, ru, th, tr, uk, vi, zh-CN, zh-TW) |
 | Data payload Next.js | 4.882 file |
 | Dung lượng `public/` | ~2,3 GB |
@@ -46,24 +59,17 @@ Mở http://127.0.0.1:4173.
 
 ## Cách hoạt động
 
-1. **Rewrite khi phục vụ.** Tài nguyên lưu trên đĩa vẫn giữ URL gốc (`https://assets.parroto.app/...`); server thay bằng đường dẫn nội bộ (`/assets/...`, `/api/...`, `/podcast/...`) khi trả về, nên đổi cổng hay tên miền không phải sửa dữ liệu.
-2. **Nav phía client.** Mỗi trang có `__NEXT_DATA__` rỗng từ SSR, nên `_next/data/<buildId>/<locale>/<route>.json` được tải từ origin và phục vụ nội bộ; router Next lấy props và bản dịch từ đây.
-3. **API.** Các endpoint app gọi được phục vụ từ fixture JSON. Endpoint chưa chụp trả `404 {"error":"endpoint not captured"}` để app giữ nguyên dữ liệu SSR (giống hành vi lỗi 401 của origin), thay vì thay bằng trạng thái rỗng.
-4. **Route ngoài danh mục** (từ điển, bài học động, trang mới) được tải từ origin ở lần truy cập đầu rồi cache vào `public/`, nên site vẫn đầy đủ với mọi URL hợp lệ.
-
-## Kiểm chứng độ giống
-
-- So sánh pixel 15 trang (chụp bằng REA, Chrome 1280×720, cùng kịch bản, chờ ổn định): trang chủ, pricing, games, vocabulary/cards/word-match, topic, blog post, `/vi`, `/zh-CN/vocabulary/common-1000` trùng khít 0 pixel; các trang còn lại lệch 0,0002–0,024 do số liệu sống (lượt làm bài, bảng xếp hạng), khung hình mascot động, hoặc ảnh minh hoạ bị resample dưới 1 pixel. Riêng `/community-lessons` lệch 0,12 vì danh sách bài học trên origin đã thay đổi so với lúc chụp fixture.
-- Điều hướng client-side (click sidebar sang `/topics`, `/vocabulary`, `/games`, `/stories`) đổi trang đúng, tiêu đề và nội dung đúng, không lỗi console.
-- Audit 47 trang đại diện: 0 tài nguyên lỗi; 3 request API trả 401 giống hệt origin (các endpoint yêu cầu đăng nhập).
-- `npm run verify`: 6.415/6.441 route trả 200; 26 route còn lại là URL chết trong sitemap gốc (origin cũng trả 404).
+1. **Rewrite khi phục vụ.** `server.mjs` phục vụ tệp tĩnh, fixture API và fallback qua `rewriteBody()` trong `lib/rewrite.mjs` để chuẩn hóa đường dẫn nội bộ (`/assets/...`, `/api/...`, `/podcast/...`), thương hiệu `TuanDat`, trạng thái `"is_pro":false`, và lọc các khối HTML Pro/tải app/mạng xã hội khỏi SSR HTML; đồng thời gắn query `?v=tuandat7` với `Cache-Control: no-cache` để trình duyệt luôn nhận bundle mới.
+2. **Chặn route trả phí.** Mọi yêu cầu tới `/pricing`, `/checkout`, `/activation`, `/affiliate` hoặc `_next/data` tương ứng đều được chuyển hướng về `/`.
+3. **Nav phía client.** Next.js tải `_next/data/<buildId>/<locale>/<route>.json` nội bộ để lấy props và bản dịch cho các trang.
+4. **API.** Các endpoint app gọi được phục vụ từ fixture JSON (đã qua `rewriteBody()`); các API giá/khuyến mãi/thanh toán trả `{"data":[]}`. Endpoint chưa chụp trả `404 {"error":"endpoint not captured"}`.
+5. **Route ngoài danh mục** được tải từ origin ở lần truy cập đầu (chạy qua `rewriteBody()`) rồi cache vào `public/`.
 
 ## Hạn chế
 
-- Nội dung động (bảng xếp hạng, bài cộng đồng, số lượt học) là ảnh chụp tại thời điểm mirror.
-- Các trang cần đăng nhập chỉ có trạng thái chưa đăng nhập; đăng nhập, thanh toán, ghi dữ liệu không hoạt động vì không có backend thật.
+- Nội dung động cần backend (đăng nhập tài khoản từ xa, bảng xếp hạng sống, lưu tiến độ lên server từ xa) chỉ hoạt động với dữ liệu fixture/cục bộ hiện có.
 - Route ngoài danh mục cần Internet cho lần tải đầu; sau đó chạy offline.
-- Âm thanh, video YouTube và quảng cáo vẫn lấy từ dịch vụ bên thứ ba.
+- Âm thanh và video YouTube vẫn phát từ nguồn bên thứ ba.
 
 ## Làm mới dữ liệu
 
@@ -76,4 +82,4 @@ npm run verify         # kiểm tra lại toàn bộ route
 
 ## Nguồn và bản quyền
 
-Toàn bộ nội dung, hình ảnh, mã và nhãn hiệu thuộc PARROTO COMPANY LIMITED. Bản mirror này chỉ dùng cho mục đích học tập và nghiên cứu kỹ thuật.
+Bản clone học tập và nghiên cứu kỹ thuật dựa trên mã nguồn/dữ liệu gốc của Parroto.
