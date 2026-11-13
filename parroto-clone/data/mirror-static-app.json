@@ -1,0 +1,156 @@
+{
+  "groups": [
+    "static",
+    "app"
+  ],
+  "pages": {
+    "ok": 680,
+    "fail": 0,
+    "bytes": 334074446
+  },
+  "assets": {
+    "ok": 508,
+    "fail": 33,
+    "bytes": 35091469
+  },
+  "skipped": 0,
+  "failureCount": 33,
+  "failuresByHost": {
+    "assets.parroto.app": 6,
+    "parroto.app": 27
+  },
+  "failures": [
+    {
+      "url": "https://assets.parroto.app/assets/users/M6TpGrq6x6cCIKwavDx9eIDmPRq2/avatar/avatar_M6TpGrq6x6cCIKwavDx9eIDmPRq2_1781141456843.webp",
+      "reason": "not-found"
+    },
+    {
+      "url": "https://parroto.app/images/avatar/vietnamese.webp",
+      "reason": "not-found"
+    },
+    {
+      "url": "https://parroto.app/images/avatar/korean.webp",
+      "reason": "not-found"
+    },
+    {
+      "url": "https://assets.parroto.app/images/avatar/malaysian.webp",
+      "reason": "not-found"
+    },
+    {
+      "url": "https://parroto.app/images/avatar/chinese.webp",
+      "reason": "not-found"
+    },
+    {
+      "url": "https://parroto.app/images/avatar/japanese.webp",
+      "reason": "not-found"
+    },
+    {
+      "url": "https://parroto.app/_next/static/chunks/pages/%23b",
+      "reason": "not-found"
+    },
+    {
+      "url": "https://parroto.app/game2.webp",
+      "reason": "not-found"
+    },
+    {
+      "url": "https://assets.parroto.app/images/flags/",
+      "reason": "not-found"
+    },
+    {
+      "url": "https://parroto.app/stories-quiz.webp",
+      "reason": "not-found"
+    },
+    {
+      "url": "https://parroto.app/stories-words.webp",
+      "reason": "not-found"
+    },
+    {
+      "url": "https://assets.parroto.app/images/topics/default.jpg",
+      "reason": "not-found"
+    },
+    {
+      "url": "https://assets.parroto.app/images/new-feature",
+      "reason": "not-found"
+    },
+    {
+      "url": "https://parroto.app/stories-hero.webp",
+      "reason": "not-found"
+    },
+    {
+      "url": "https://parroto.app/_next/static/chunks/.concat(W,",
+      "reason": "not-found"
+    },
+    {
+      "url": "https://parroto.app//.js",
+      "reason": "not-found"
+    },
+    {
+      "url": "https://parroto.app/stories-audio.webp",
+      "reason": "not-found"
+    },
+    {
+      "url": "https://parroto.app/game12.webp",
+      "reason": "not-found"
+    },
+    {
+      "url": "https://parroto.app/game3.webp",
+      "reason": "not-found"
+    },
+    {
+      "url": "https://parroto.app/game1.webp",
+      "reason": "not-found"
+    },
+    {
+      "url": "https://parroto.app/game4.webp",
+      "reason": "not-found"
+    },
+    {
+      "url": "https://parroto.app/game13.webp",
+      "reason": "not-found"
+    },
+    {
+      "url": "https://parroto.app/game16.webp",
+      "reason": "not-found"
+    },
+    {
+      "url": "https://parroto.app/game14.webp",
+      "reason": "not-found"
+    },
+    {
+      "url": "https://parroto.app/game15.webp",
+      "reason": "not-found"
+    },
+    {
+      "url": "https://parroto.app/game17.webp",
+      "reason": "not-found"
+    },
+    {
+      "url": "https://parroto.app/game18.webp",
+      "reason": "not-found"
+    },
+    {
+      "url": "https://parroto.app/game6.webp",
+      "reason": "not-found"
+    },
+    {
+      "url": "https://parroto.app/_next/static/chunks/pages/.concat(aL,",
+      "reason": "not-found"
+    },
+    {
+      "url": "https://parroto.app/flashcard1.svg",
+      "reason": "not-found"
+    },
+    {
+      "url": "https://parroto.app/flashcard2.svg",
+      "reason": "not-found"
+    },
+    {
+      "url": "https://parroto.app/index.js",
+      "reason": "not-found"
+    },
+    {
+      "url": "https://assets.parroto.app/assets/game",
+      "reason": "not-found"
+    }
+  ]
+}

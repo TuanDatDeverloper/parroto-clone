@@ -1,0 +1,48 @@
+{
+  "GET /api/lessons/daily": "lessons/daily.json",
+  "GET /api/promo/active": "promo/active.json",
+  "GET /api/leaderboard/monthly?month=202611&sortBy=vocabulary": "leaderboard/monthly.384b9f698b.json",
+  "GET /api/vocabulary/enc/public?page=1&limit=12&search=": "vocabulary/enc/public.70670bde16.json",
+  "GET /api/stories?sort=popular&page=1&limit=18": "stories.e83fdc67aa.json",
+  "GET /api/games/feed?limit=12": "games/feed.aeb223772a.json",
+  "GET /api/games/top-players?limit=10": "games/top-players.6e77243a98.json",
+  "GET /api/exams/published/sets?exam_type_code=IELTS": "exams/published/sets.66ebdee451.json",
+  "GET /api/vocabulary/enc/public?page=1&limit=12&search=ielts": "vocabulary/enc/public.1e3469c567.json",
+  "POST /api/community-lessons/6af5b5a6e6005c9297174b49/view": "community-lessons/6af5b5a6e6005c9297174b49/view.json",
+  "GET /api/prices": "prices.json",
+  "GET /api/vocab-battle/leaderboard": "vocab-battle/leaderboard.json",
+  "GET /api/community-lessons/6af5b5a6e6005c9297174b49/transcript?after_order=0&limit=40": "community-lessons/6af5b5a6e6005c9297174b49/transcript.356980c507.json",
+  "GET /api/community-lessons?limit=24": "community-lessons.9af3409c48.json",
+  "GET /api/leaderboard/monthly?month=202611": "leaderboard/monthly.4d1e76353e.json",
+  "GET /api/community-lessons/shorts?limit=10": "community-lessons/shorts.6e77243a98.json",
+  "GET /api/lessons?limit=4&sort_by=order&topic_slug=ielts-listening&page=1": "lessons.6f9f17e7ca.json",
+  "GET /api/vocabulary/enc/public?page=1&limit=60": "vocabulary/enc/public.08b725535c.json",
+  "GET /api/lessons?limit=500&sort_by=order&topic_slug=ielts-listening&page=1": "lessons.9497393d47.json",
+  "GET /api/stories/6adcd3a5812cc2bb8bbfa97e/comments?page=1&limit=10": "stories/6adcd3a5812cc2bb8bbfa97e/comments.4dabd58554.json",
+  "GET /api/stories/6adcd3a5812cc2bb8bbfa97e/view": "stories/6adcd3a5812cc2bb8bbfa97e/view.json",
+  "GET /api/stories/6adcd3a5812cc2bb8bbfa97e/related?limit=6": "stories/6adcd3a5812cc2bb8bbfa97e/related.75a811fd4e.json",
+  "GET /api/lessons?limit=4&sort_by=order&topic_slug=toeic-listening&page=1": "lessons.6a012a80a3.json",
+  "GET /api/vocabulary/enc/public?page=1&limit=12&search=toeic": "vocabulary/enc/public.665971a205.json",
+  "GET /api/exams/published/sets?exam_type_code=TOEIC": "exams/published/sets.723b236118.json",
+  "GET /api/community-lessons/6af5b5a6e6005c9297174b49/view": "community-lessons/6af5b5a6e6005c9297174b49/view.json",
+  "GET /api/vocabulary/enc/public/68f46a24b79f2226f4ef9491/groups": "vocabulary/enc/public/68f46a24b79f2226f4ef9491/groups.json",
+  "GET /api/streak/config": "streak/config.json",
+  "GET /api/leaderboard/home?period=weekly&metric=active_time&limit=20": "leaderboard/home.43d68b0c13.json",
+  "GET /api/missions/config": "missions/config.json",
+  "GET /api/missions/feed?limit=20": "missions/feed.8245444398.json",
+  "GET /api/shop/items?limit=100&isApproved=true&locale=en": "shop/items.2b02713429.json",
+  "GET /api/posts/categories": "posts/categories.json",
+  "GET /api/posts?page=1&limit=10&sort_by=created_at&sort_order=desc&language=en": "posts.9d8bba89c9.json",
+  "GET /api/wallet": {
+    "file": "wallet.json",
+    "status": 401
+  },
+  "GET /api/streak": {
+    "file": "streak.json",
+    "status": 401
+  },
+  "GET /api/learning-vocabulary/enc/new?deckId=68f46a24b79f2226f4ef9491&groupId=68f47874d398918f2297de84&limit=1000&mode=quiz": {
+    "file": "learning-vocabulary/enc/new.b4f9c0e3c2.json",
+    "status": 401
+  }
+}

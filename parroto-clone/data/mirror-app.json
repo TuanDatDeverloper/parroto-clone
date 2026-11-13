@@ -1,0 +1,71 @@
+{
+  "groups": [
+    "app"
+  ],
+  "pages": {
+    "ok": 289,
+    "fail": 0,
+    "bytes": 43200875
+  },
+  "assets": {
+    "ok": 200,
+    "fail": 12,
+    "bytes": 7376267
+  },
+  "skipped": 0,
+  "failureCount": 12,
+  "failuresByHost": {
+    "parroto.app": 11,
+    "assets.parroto.app": 1
+  },
+  "failures": [
+    {
+      "url": "https://parroto.app/_next/static/chunks/pages/%23b",
+      "reason": "not-found"
+    },
+    {
+      "url": "https://assets.parroto.app/images/new-feature",
+      "reason": "not-found"
+    },
+    {
+      "url": "https://parroto.app/stories-quiz.webp",
+      "reason": "not-found"
+    },
+    {
+      "url": "https://parroto.app/stories-words.webp",
+      "reason": "not-found"
+    },
+    {
+      "url": "https://parroto.app/_next/static/chunks/.concat(W,",
+      "reason": "not-found"
+    },
+    {
+      "url": "https://parroto.app/stories-audio.webp",
+      "reason": "not-found"
+    },
+    {
+      "url": "https://parroto.app/stories-hero.webp",
+      "reason": "not-found"
+    },
+    {
+      "url": "https://parroto.app//.js",
+      "reason": "not-found"
+    },
+    {
+      "url": "https://parroto.app/index.js",
+      "reason": "not-found"
+    },
+    {
+      "url": "https://parroto.app/flashcard1.svg",
+      "reason": "not-found"
+    },
+    {
+      "url": "https://parroto.app/_next/static/chunks/pages/.concat(aL,",
+      "reason": "not-found"
+    },
+    {
+      "url": "https://parroto.app/flashcard2.svg",
+      "reason": "not-found"
+    }
+  ]
+}

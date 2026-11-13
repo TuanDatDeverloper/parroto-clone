@@ -1,0 +1,528 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+    <url>
+        <loc>https://parroto.app</loc>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://parroto.app"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://parroto.app"/>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://parroto.app/ar"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://parroto.app/de"/>
+        <xhtml:link rel="alternate" hreflang="el" href="https://parroto.app/el"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://parroto.app/es"/>
+        <xhtml:link rel="alternate" hreflang="id" href="https://parroto.app/id"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://parroto.app/ja"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://parroto.app/ko"/>
+        <xhtml:link rel="alternate" hreflang="ms" href="https://parroto.app/ms"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://parroto.app/pt"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://parroto.app/ru"/>
+        <xhtml:link rel="alternate" hreflang="th" href="https://parroto.app/th"/>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://parroto.app/tr"/>
+        <xhtml:link rel="alternate" hreflang="uk" href="https://parroto.app/uk"/>
+        <xhtml:link rel="alternate" hreflang="vi" href="https://parroto.app/vi"/>
+        <xhtml:link rel="alternate" hreflang="zh-CN" href="https://parroto.app/zh-CN"/>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://parroto.app/zh-TW"/>
+    </url>
+    <url>
+        <loc>https://parroto.app/dictation</loc>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://parroto.app/dictation"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://parroto.app/dictation"/>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://parroto.app/ar/dictation"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://parroto.app/de/dictation"/>
+        <xhtml:link rel="alternate" hreflang="el" href="https://parroto.app/el/dictation"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://parroto.app/es/dictation"/>
+        <xhtml:link rel="alternate" hreflang="id" href="https://parroto.app/id/dictation"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://parroto.app/ja/dictation"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://parroto.app/ko/dictation"/>
+        <xhtml:link rel="alternate" hreflang="ms" href="https://parroto.app/ms/dictation"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://parroto.app/pt/dictation"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://parroto.app/ru/dictation"/>
+        <xhtml:link rel="alternate" hreflang="th" href="https://parroto.app/th/dictation"/>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://parroto.app/tr/dictation"/>
+        <xhtml:link rel="alternate" hreflang="uk" href="https://parroto.app/uk/dictation"/>
+        <xhtml:link rel="alternate" hreflang="vi" href="https://parroto.app/vi/dictation"/>
+        <xhtml:link rel="alternate" hreflang="zh-CN" href="https://parroto.app/zh-CN/dictation"/>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://parroto.app/zh-TW/dictation"/>
+    </url>
+    <url>
+        <loc>https://parroto.app/stories</loc>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://parroto.app/stories"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://parroto.app/stories"/>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://parroto.app/ar/stories"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://parroto.app/de/stories"/>
+        <xhtml:link rel="alternate" hreflang="el" href="https://parroto.app/el/stories"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://parroto.app/es/stories"/>
+        <xhtml:link rel="alternate" hreflang="id" href="https://parroto.app/id/stories"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://parroto.app/ja/stories"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://parroto.app/ko/stories"/>
+        <xhtml:link rel="alternate" hreflang="ms" href="https://parroto.app/ms/stories"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://parroto.app/pt/stories"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://parroto.app/ru/stories"/>
+        <xhtml:link rel="alternate" hreflang="th" href="https://parroto.app/th/stories"/>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://parroto.app/tr/stories"/>
+        <xhtml:link rel="alternate" hreflang="uk" href="https://parroto.app/uk/stories"/>
+        <xhtml:link rel="alternate" hreflang="vi" href="https://parroto.app/vi/stories"/>
+        <xhtml:link rel="alternate" hreflang="zh-CN" href="https://parroto.app/zh-CN/stories"/>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://parroto.app/zh-TW/stories"/>
+    </url>
+    <url>
+        <loc>https://parroto.app/shadowing</loc>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://parroto.app/shadowing"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://parroto.app/shadowing"/>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://parroto.app/ar/shadowing"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://parroto.app/de/shadowing"/>
+        <xhtml:link rel="alternate" hreflang="el" href="https://parroto.app/el/shadowing"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://parroto.app/es/shadowing"/>
+        <xhtml:link rel="alternate" hreflang="id" href="https://parroto.app/id/shadowing"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://parroto.app/ja/shadowing"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://parroto.app/ko/shadowing"/>
+        <xhtml:link rel="alternate" hreflang="ms" href="https://parroto.app/ms/shadowing"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://parroto.app/pt/shadowing"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://parroto.app/ru/shadowing"/>
+        <xhtml:link rel="alternate" hreflang="th" href="https://parroto.app/th/shadowing"/>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://parroto.app/tr/shadowing"/>
+        <xhtml:link rel="alternate" hreflang="uk" href="https://parroto.app/uk/shadowing"/>
+        <xhtml:link rel="alternate" hreflang="vi" href="https://parroto.app/vi/shadowing"/>
+        <xhtml:link rel="alternate" hreflang="zh-CN" href="https://parroto.app/zh-CN/shadowing"/>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://parroto.app/zh-TW/shadowing"/>
+    </url>
+    <url>
+        <loc>https://parroto.app/topics</loc>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://parroto.app/topics"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://parroto.app/topics"/>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://parroto.app/ar/topics"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://parroto.app/de/topics"/>
+        <xhtml:link rel="alternate" hreflang="el" href="https://parroto.app/el/topics"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://parroto.app/es/topics"/>
+        <xhtml:link rel="alternate" hreflang="id" href="https://parroto.app/id/topics"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://parroto.app/ja/topics"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://parroto.app/ko/topics"/>
+        <xhtml:link rel="alternate" hreflang="ms" href="https://parroto.app/ms/topics"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://parroto.app/pt/topics"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://parroto.app/ru/topics"/>
+        <xhtml:link rel="alternate" hreflang="th" href="https://parroto.app/th/topics"/>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://parroto.app/tr/topics"/>
+        <xhtml:link rel="alternate" hreflang="uk" href="https://parroto.app/uk/topics"/>
+        <xhtml:link rel="alternate" hreflang="vi" href="https://parroto.app/vi/topics"/>
+        <xhtml:link rel="alternate" hreflang="zh-CN" href="https://parroto.app/zh-CN/topics"/>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://parroto.app/zh-TW/topics"/>
+    </url>
+    <url>
+        <loc>https://parroto.app/topics/ielts-listening</loc>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://parroto.app/topics/ielts-listening"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://parroto.app/topics/ielts-listening"/>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://parroto.app/ar/topics/ielts-listening"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://parroto.app/de/topics/ielts-listening"/>
+        <xhtml:link rel="alternate" hreflang="el" href="https://parroto.app/el/topics/ielts-listening"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://parroto.app/es/topics/ielts-listening"/>
+        <xhtml:link rel="alternate" hreflang="id" href="https://parroto.app/id/topics/ielts-listening"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://parroto.app/ja/topics/ielts-listening"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://parroto.app/ko/topics/ielts-listening"/>
+        <xhtml:link rel="alternate" hreflang="ms" href="https://parroto.app/ms/topics/ielts-listening"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://parroto.app/pt/topics/ielts-listening"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://parroto.app/ru/topics/ielts-listening"/>
+        <xhtml:link rel="alternate" hreflang="th" href="https://parroto.app/th/topics/ielts-listening"/>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://parroto.app/tr/topics/ielts-listening"/>
+        <xhtml:link rel="alternate" hreflang="uk" href="https://parroto.app/uk/topics/ielts-listening"/>
+        <xhtml:link rel="alternate" hreflang="vi" href="https://parroto.app/vi/topics/ielts-listening"/>
+        <xhtml:link rel="alternate" hreflang="zh-CN" href="https://parroto.app/zh-CN/topics/ielts-listening"/>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://parroto.app/zh-TW/topics/ielts-listening"/>
+    </url>
+    <url>
+        <loc>https://parroto.app/topics/toeic-listening</loc>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://parroto.app/topics/toeic-listening"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://parroto.app/topics/toeic-listening"/>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://parroto.app/ar/topics/toeic-listening"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://parroto.app/de/topics/toeic-listening"/>
+        <xhtml:link rel="alternate" hreflang="el" href="https://parroto.app/el/topics/toeic-listening"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://parroto.app/es/topics/toeic-listening"/>
+        <xhtml:link rel="alternate" hreflang="id" href="https://parroto.app/id/topics/toeic-listening"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://parroto.app/ja/topics/toeic-listening"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://parroto.app/ko/topics/toeic-listening"/>
+        <xhtml:link rel="alternate" hreflang="ms" href="https://parroto.app/ms/topics/toeic-listening"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://parroto.app/pt/topics/toeic-listening"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://parroto.app/ru/topics/toeic-listening"/>
+        <xhtml:link rel="alternate" hreflang="th" href="https://parroto.app/th/topics/toeic-listening"/>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://parroto.app/tr/topics/toeic-listening"/>
+        <xhtml:link rel="alternate" hreflang="uk" href="https://parroto.app/uk/topics/toeic-listening"/>
+        <xhtml:link rel="alternate" hreflang="vi" href="https://parroto.app/vi/topics/toeic-listening"/>
+        <xhtml:link rel="alternate" hreflang="zh-CN" href="https://parroto.app/zh-CN/topics/toeic-listening"/>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://parroto.app/zh-TW/topics/toeic-listening"/>
+    </url>
+    <url>
+        <loc>https://parroto.app/topics/toefl-listening</loc>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://parroto.app/topics/toefl-listening"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://parroto.app/topics/toefl-listening"/>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://parroto.app/ar/topics/toefl-listening"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://parroto.app/de/topics/toefl-listening"/>
+        <xhtml:link rel="alternate" hreflang="el" href="https://parroto.app/el/topics/toefl-listening"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://parroto.app/es/topics/toefl-listening"/>
+        <xhtml:link rel="alternate" hreflang="id" href="https://parroto.app/id/topics/toefl-listening"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://parroto.app/ja/topics/toefl-listening"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://parroto.app/ko/topics/toefl-listening"/>
+        <xhtml:link rel="alternate" hreflang="ms" href="https://parroto.app/ms/topics/toefl-listening"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://parroto.app/pt/topics/toefl-listening"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://parroto.app/ru/topics/toefl-listening"/>
+        <xhtml:link rel="alternate" hreflang="th" href="https://parroto.app/th/topics/toefl-listening"/>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://parroto.app/tr/topics/toefl-listening"/>
+        <xhtml:link rel="alternate" hreflang="uk" href="https://parroto.app/uk/topics/toefl-listening"/>
+        <xhtml:link rel="alternate" hreflang="vi" href="https://parroto.app/vi/topics/toefl-listening"/>
+        <xhtml:link rel="alternate" hreflang="zh-CN" href="https://parroto.app/zh-CN/topics/toefl-listening"/>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://parroto.app/zh-TW/topics/toefl-listening"/>
+    </url>
+    <url>
+        <loc>https://parroto.app/topics/movie-short-clip</loc>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://parroto.app/topics/movie-short-clip"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://parroto.app/topics/movie-short-clip"/>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://parroto.app/ar/topics/movie-short-clip"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://parroto.app/de/topics/movie-short-clip"/>
+        <xhtml:link rel="alternate" hreflang="el" href="https://parroto.app/el/topics/movie-short-clip"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://parroto.app/es/topics/movie-short-clip"/>
+        <xhtml:link rel="alternate" hreflang="id" href="https://parroto.app/id/topics/movie-short-clip"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://parroto.app/ja/topics/movie-short-clip"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://parroto.app/ko/topics/movie-short-clip"/>
+        <xhtml:link rel="alternate" hreflang="ms" href="https://parroto.app/ms/topics/movie-short-clip"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://parroto.app/pt/topics/movie-short-clip"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://parroto.app/ru/topics/movie-short-clip"/>
+        <xhtml:link rel="alternate" hreflang="th" href="https://parroto.app/th/topics/movie-short-clip"/>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://parroto.app/tr/topics/movie-short-clip"/>
+        <xhtml:link rel="alternate" hreflang="uk" href="https://parroto.app/uk/topics/movie-short-clip"/>
+        <xhtml:link rel="alternate" hreflang="vi" href="https://parroto.app/vi/topics/movie-short-clip"/>
+        <xhtml:link rel="alternate" hreflang="zh-CN" href="https://parroto.app/zh-CN/topics/movie-short-clip"/>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://parroto.app/zh-TW/topics/movie-short-clip"/>
+    </url>
+    <url>
+        <loc>https://parroto.app/topics/learning-resources</loc>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://parroto.app/topics/learning-resources"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://parroto.app/topics/learning-resources"/>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://parroto.app/ar/topics/learning-resources"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://parroto.app/de/topics/learning-resources"/>
+        <xhtml:link rel="alternate" hreflang="el" href="https://parroto.app/el/topics/learning-resources"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://parroto.app/es/topics/learning-resources"/>
+        <xhtml:link rel="alternate" hreflang="id" href="https://parroto.app/id/topics/learning-resources"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://parroto.app/ja/topics/learning-resources"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://parroto.app/ko/topics/learning-resources"/>
+        <xhtml:link rel="alternate" hreflang="ms" href="https://parroto.app/ms/topics/learning-resources"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://parroto.app/pt/topics/learning-resources"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://parroto.app/ru/topics/learning-resources"/>
+        <xhtml:link rel="alternate" hreflang="th" href="https://parroto.app/th/topics/learning-resources"/>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://parroto.app/tr/topics/learning-resources"/>
+        <xhtml:link rel="alternate" hreflang="uk" href="https://parroto.app/uk/topics/learning-resources"/>
+        <xhtml:link rel="alternate" hreflang="vi" href="https://parroto.app/vi/topics/learning-resources"/>
+        <xhtml:link rel="alternate" hreflang="zh-CN" href="https://parroto.app/zh-CN/topics/learning-resources"/>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://parroto.app/zh-TW/topics/learning-resources"/>
+    </url>
+    <url>
+        <loc>https://parroto.app/topics/entertainment</loc>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://parroto.app/topics/entertainment"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://parroto.app/topics/entertainment"/>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://parroto.app/ar/topics/entertainment"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://parroto.app/de/topics/entertainment"/>
+        <xhtml:link rel="alternate" hreflang="el" href="https://parroto.app/el/topics/entertainment"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://parroto.app/es/topics/entertainment"/>
+        <xhtml:link rel="alternate" hreflang="id" href="https://parroto.app/id/topics/entertainment"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://parroto.app/ja/topics/entertainment"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://parroto.app/ko/topics/entertainment"/>
+        <xhtml:link rel="alternate" hreflang="ms" href="https://parroto.app/ms/topics/entertainment"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://parroto.app/pt/topics/entertainment"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://parroto.app/ru/topics/entertainment"/>
+        <xhtml:link rel="alternate" hreflang="th" href="https://parroto.app/th/topics/entertainment"/>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://parroto.app/tr/topics/entertainment"/>
+        <xhtml:link rel="alternate" hreflang="uk" href="https://parroto.app/uk/topics/entertainment"/>
+        <xhtml:link rel="alternate" hreflang="vi" href="https://parroto.app/vi/topics/entertainment"/>
+        <xhtml:link rel="alternate" hreflang="zh-CN" href="https://parroto.app/zh-CN/topics/entertainment"/>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://parroto.app/zh-TW/topics/entertainment"/>
+    </url>
+    <url>
+        <loc>https://parroto.app/topics/us-uk-song</loc>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://parroto.app/topics/us-uk-song"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://parroto.app/topics/us-uk-song"/>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://parroto.app/ar/topics/us-uk-song"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://parroto.app/de/topics/us-uk-song"/>
+        <xhtml:link rel="alternate" hreflang="el" href="https://parroto.app/el/topics/us-uk-song"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://parroto.app/es/topics/us-uk-song"/>
+        <xhtml:link rel="alternate" hreflang="id" href="https://parroto.app/id/topics/us-uk-song"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://parroto.app/ja/topics/us-uk-song"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://parroto.app/ko/topics/us-uk-song"/>
+        <xhtml:link rel="alternate" hreflang="ms" href="https://parroto.app/ms/topics/us-uk-song"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://parroto.app/pt/topics/us-uk-song"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://parroto.app/ru/topics/us-uk-song"/>
+        <xhtml:link rel="alternate" hreflang="th" href="https://parroto.app/th/topics/us-uk-song"/>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://parroto.app/tr/topics/us-uk-song"/>
+        <xhtml:link rel="alternate" hreflang="uk" href="https://parroto.app/uk/topics/us-uk-song"/>
+        <xhtml:link rel="alternate" hreflang="vi" href="https://parroto.app/vi/topics/us-uk-song"/>
+        <xhtml:link rel="alternate" hreflang="zh-CN" href="https://parroto.app/zh-CN/topics/us-uk-song"/>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://parroto.app/zh-TW/topics/us-uk-song"/>
+    </url>
+    <url>
+        <loc>https://parroto.app/topics/animals-and-wildlife</loc>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://parroto.app/topics/animals-and-wildlife"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://parroto.app/topics/animals-and-wildlife"/>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://parroto.app/ar/topics/animals-and-wildlife"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://parroto.app/de/topics/animals-and-wildlife"/>
+        <xhtml:link rel="alternate" hreflang="el" href="https://parroto.app/el/topics/animals-and-wildlife"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://parroto.app/es/topics/animals-and-wildlife"/>
+        <xhtml:link rel="alternate" hreflang="id" href="https://parroto.app/id/topics/animals-and-wildlife"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://parroto.app/ja/topics/animals-and-wildlife"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://parroto.app/ko/topics/animals-and-wildlife"/>
+        <xhtml:link rel="alternate" hreflang="ms" href="https://parroto.app/ms/topics/animals-and-wildlife"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://parroto.app/pt/topics/animals-and-wildlife"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://parroto.app/ru/topics/animals-and-wildlife"/>
+        <xhtml:link rel="alternate" hreflang="th" href="https://parroto.app/th/topics/animals-and-wildlife"/>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://parroto.app/tr/topics/animals-and-wildlife"/>
+        <xhtml:link rel="alternate" hreflang="uk" href="https://parroto.app/uk/topics/animals-and-wildlife"/>
+        <xhtml:link rel="alternate" hreflang="vi" href="https://parroto.app/vi/topics/animals-and-wildlife"/>
+        <xhtml:link rel="alternate" hreflang="zh-CN" href="https://parroto.app/zh-CN/topics/animals-and-wildlife"/>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://parroto.app/zh-TW/topics/animals-and-wildlife"/>
+    </url>
+    <url>
+        <loc>https://parroto.app/topics/science-and-facts</loc>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://parroto.app/topics/science-and-facts"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://parroto.app/topics/science-and-facts"/>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://parroto.app/ar/topics/science-and-facts"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://parroto.app/de/topics/science-and-facts"/>
+        <xhtml:link rel="alternate" hreflang="el" href="https://parroto.app/el/topics/science-and-facts"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://parroto.app/es/topics/science-and-facts"/>
+        <xhtml:link rel="alternate" hreflang="id" href="https://parroto.app/id/topics/science-and-facts"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://parroto.app/ja/topics/science-and-facts"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://parroto.app/ko/topics/science-and-facts"/>
+        <xhtml:link rel="alternate" hreflang="ms" href="https://parroto.app/ms/topics/science-and-facts"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://parroto.app/pt/topics/science-and-facts"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://parroto.app/ru/topics/science-and-facts"/>
+        <xhtml:link rel="alternate" hreflang="th" href="https://parroto.app/th/topics/science-and-facts"/>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://parroto.app/tr/topics/science-and-facts"/>
+        <xhtml:link rel="alternate" hreflang="uk" href="https://parroto.app/uk/topics/science-and-facts"/>
+        <xhtml:link rel="alternate" hreflang="vi" href="https://parroto.app/vi/topics/science-and-facts"/>
+        <xhtml:link rel="alternate" hreflang="zh-CN" href="https://parroto.app/zh-CN/topics/science-and-facts"/>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://parroto.app/zh-TW/topics/science-and-facts"/>
+    </url>
+    <url>
+        <loc>https://parroto.app/topics/fairy-tale</loc>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://parroto.app/topics/fairy-tale"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://parroto.app/topics/fairy-tale"/>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://parroto.app/ar/topics/fairy-tale"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://parroto.app/de/topics/fairy-tale"/>
+        <xhtml:link rel="alternate" hreflang="el" href="https://parroto.app/el/topics/fairy-tale"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://parroto.app/es/topics/fairy-tale"/>
+        <xhtml:link rel="alternate" hreflang="id" href="https://parroto.app/id/topics/fairy-tale"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://parroto.app/ja/topics/fairy-tale"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://parroto.app/ko/topics/fairy-tale"/>
+        <xhtml:link rel="alternate" hreflang="ms" href="https://parroto.app/ms/topics/fairy-tale"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://parroto.app/pt/topics/fairy-tale"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://parroto.app/ru/topics/fairy-tale"/>
+        <xhtml:link rel="alternate" hreflang="th" href="https://parroto.app/th/topics/fairy-tale"/>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://parroto.app/tr/topics/fairy-tale"/>
+        <xhtml:link rel="alternate" hreflang="uk" href="https://parroto.app/uk/topics/fairy-tale"/>
+        <xhtml:link rel="alternate" hreflang="vi" href="https://parroto.app/vi/topics/fairy-tale"/>
+        <xhtml:link rel="alternate" hreflang="zh-CN" href="https://parroto.app/zh-CN/topics/fairy-tale"/>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://parroto.app/zh-TW/topics/fairy-tale"/>
+    </url>
+    <url>
+        <loc>https://parroto.app/topics/daily-english-conversation</loc>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://parroto.app/topics/daily-english-conversation"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://parroto.app/topics/daily-english-conversation"/>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://parroto.app/ar/topics/daily-english-conversation"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://parroto.app/de/topics/daily-english-conversation"/>
+        <xhtml:link rel="alternate" hreflang="el" href="https://parroto.app/el/topics/daily-english-conversation"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://parroto.app/es/topics/daily-english-conversation"/>
+        <xhtml:link rel="alternate" hreflang="id" href="https://parroto.app/id/topics/daily-english-conversation"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://parroto.app/ja/topics/daily-english-conversation"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://parroto.app/ko/topics/daily-english-conversation"/>
+        <xhtml:link rel="alternate" hreflang="ms" href="https://parroto.app/ms/topics/daily-english-conversation"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://parroto.app/pt/topics/daily-english-conversation"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://parroto.app/ru/topics/daily-english-conversation"/>
+        <xhtml:link rel="alternate" hreflang="th" href="https://parroto.app/th/topics/daily-english-conversation"/>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://parroto.app/tr/topics/daily-english-conversation"/>
+        <xhtml:link rel="alternate" hreflang="uk" href="https://parroto.app/uk/topics/daily-english-conversation"/>
+        <xhtml:link rel="alternate" hreflang="vi" href="https://parroto.app/vi/topics/daily-english-conversation"/>
+        <xhtml:link rel="alternate" hreflang="zh-CN" href="https://parroto.app/zh-CN/topics/daily-english-conversation"/>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://parroto.app/zh-TW/topics/daily-english-conversation"/>
+    </url>
+    <url>
+        <loc>https://parroto.app/topics/ipa</loc>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://parroto.app/topics/ipa"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://parroto.app/topics/ipa"/>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://parroto.app/ar/topics/ipa"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://parroto.app/de/topics/ipa"/>
+        <xhtml:link rel="alternate" hreflang="el" href="https://parroto.app/el/topics/ipa"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://parroto.app/es/topics/ipa"/>
+        <xhtml:link rel="alternate" hreflang="id" href="https://parroto.app/id/topics/ipa"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://parroto.app/ja/topics/ipa"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://parroto.app/ko/topics/ipa"/>
+        <xhtml:link rel="alternate" hreflang="ms" href="https://parroto.app/ms/topics/ipa"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://parroto.app/pt/topics/ipa"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://parroto.app/ru/topics/ipa"/>
+        <xhtml:link rel="alternate" hreflang="th" href="https://parroto.app/th/topics/ipa"/>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://parroto.app/tr/topics/ipa"/>
+        <xhtml:link rel="alternate" hreflang="uk" href="https://parroto.app/uk/topics/ipa"/>
+        <xhtml:link rel="alternate" hreflang="vi" href="https://parroto.app/vi/topics/ipa"/>
+        <xhtml:link rel="alternate" hreflang="zh-CN" href="https://parroto.app/zh-CN/topics/ipa"/>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://parroto.app/zh-TW/topics/ipa"/>
+    </url>
+    <url>
+        <loc>https://parroto.app/topics/news</loc>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://parroto.app/topics/news"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://parroto.app/topics/news"/>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://parroto.app/ar/topics/news"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://parroto.app/de/topics/news"/>
+        <xhtml:link rel="alternate" hreflang="el" href="https://parroto.app/el/topics/news"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://parroto.app/es/topics/news"/>
+        <xhtml:link rel="alternate" hreflang="id" href="https://parroto.app/id/topics/news"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://parroto.app/ja/topics/news"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://parroto.app/ko/topics/news"/>
+        <xhtml:link rel="alternate" hreflang="ms" href="https://parroto.app/ms/topics/news"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://parroto.app/pt/topics/news"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://parroto.app/ru/topics/news"/>
+        <xhtml:link rel="alternate" hreflang="th" href="https://parroto.app/th/topics/news"/>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://parroto.app/tr/topics/news"/>
+        <xhtml:link rel="alternate" hreflang="uk" href="https://parroto.app/uk/topics/news"/>
+        <xhtml:link rel="alternate" hreflang="vi" href="https://parroto.app/vi/topics/news"/>
+        <xhtml:link rel="alternate" hreflang="zh-CN" href="https://parroto.app/zh-CN/topics/news"/>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://parroto.app/zh-TW/topics/news"/>
+    </url>
+    <url>
+        <loc>https://parroto.app/topics/ted</loc>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://parroto.app/topics/ted"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://parroto.app/topics/ted"/>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://parroto.app/ar/topics/ted"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://parroto.app/de/topics/ted"/>
+        <xhtml:link rel="alternate" hreflang="el" href="https://parroto.app/el/topics/ted"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://parroto.app/es/topics/ted"/>
+        <xhtml:link rel="alternate" hreflang="id" href="https://parroto.app/id/topics/ted"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://parroto.app/ja/topics/ted"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://parroto.app/ko/topics/ted"/>
+        <xhtml:link rel="alternate" hreflang="ms" href="https://parroto.app/ms/topics/ted"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://parroto.app/pt/topics/ted"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://parroto.app/ru/topics/ted"/>
+        <xhtml:link rel="alternate" hreflang="th" href="https://parroto.app/th/topics/ted"/>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://parroto.app/tr/topics/ted"/>
+        <xhtml:link rel="alternate" hreflang="uk" href="https://parroto.app/uk/topics/ted"/>
+        <xhtml:link rel="alternate" hreflang="vi" href="https://parroto.app/vi/topics/ted"/>
+        <xhtml:link rel="alternate" hreflang="zh-CN" href="https://parroto.app/zh-CN/topics/ted"/>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://parroto.app/zh-TW/topics/ted"/>
+    </url>
+    <url>
+        <loc>https://parroto.app/topics/vietnam-today</loc>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://parroto.app/topics/vietnam-today"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://parroto.app/topics/vietnam-today"/>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://parroto.app/ar/topics/vietnam-today"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://parroto.app/de/topics/vietnam-today"/>
+        <xhtml:link rel="alternate" hreflang="el" href="https://parroto.app/el/topics/vietnam-today"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://parroto.app/es/topics/vietnam-today"/>
+        <xhtml:link rel="alternate" hreflang="id" href="https://parroto.app/id/topics/vietnam-today"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://parroto.app/ja/topics/vietnam-today"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://parroto.app/ko/topics/vietnam-today"/>
+        <xhtml:link rel="alternate" hreflang="ms" href="https://parroto.app/ms/topics/vietnam-today"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://parroto.app/pt/topics/vietnam-today"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://parroto.app/ru/topics/vietnam-today"/>
+        <xhtml:link rel="alternate" hreflang="th" href="https://parroto.app/th/topics/vietnam-today"/>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://parroto.app/tr/topics/vietnam-today"/>
+        <xhtml:link rel="alternate" hreflang="uk" href="https://parroto.app/uk/topics/vietnam-today"/>
+        <xhtml:link rel="alternate" hreflang="vi" href="https://parroto.app/vi/topics/vietnam-today"/>
+        <xhtml:link rel="alternate" hreflang="zh-CN" href="https://parroto.app/zh-CN/topics/vietnam-today"/>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://parroto.app/zh-TW/topics/vietnam-today"/>
+    </url>
+    <url>
+        <loc>https://parroto.app/vocabulary</loc>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://parroto.app/vocabulary"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://parroto.app/vocabulary"/>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://parroto.app/ar/vocabulary"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://parroto.app/de/vocabulary"/>
+        <xhtml:link rel="alternate" hreflang="el" href="https://parroto.app/el/vocabulary"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://parroto.app/es/vocabulary"/>
+        <xhtml:link rel="alternate" hreflang="id" href="https://parroto.app/id/vocabulary"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://parroto.app/ja/vocabulary"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://parroto.app/ko/vocabulary"/>
+        <xhtml:link rel="alternate" hreflang="ms" href="https://parroto.app/ms/vocabulary"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://parroto.app/pt/vocabulary"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://parroto.app/ru/vocabulary"/>
+        <xhtml:link rel="alternate" hreflang="th" href="https://parroto.app/th/vocabulary"/>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://parroto.app/tr/vocabulary"/>
+        <xhtml:link rel="alternate" hreflang="uk" href="https://parroto.app/uk/vocabulary"/>
+        <xhtml:link rel="alternate" hreflang="vi" href="https://parroto.app/vi/vocabulary"/>
+        <xhtml:link rel="alternate" hreflang="zh-CN" href="https://parroto.app/zh-CN/vocabulary"/>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://parroto.app/zh-TW/vocabulary"/>
+    </url>
+    <url>
+        <loc>https://parroto.app/vocab-battle</loc>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://parroto.app/vocab-battle"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://parroto.app/vocab-battle"/>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://parroto.app/ar/vocab-battle"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://parroto.app/de/vocab-battle"/>
+        <xhtml:link rel="alternate" hreflang="el" href="https://parroto.app/el/vocab-battle"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://parroto.app/es/vocab-battle"/>
+        <xhtml:link rel="alternate" hreflang="id" href="https://parroto.app/id/vocab-battle"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://parroto.app/ja/vocab-battle"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://parroto.app/ko/vocab-battle"/>
+        <xhtml:link rel="alternate" hreflang="ms" href="https://parroto.app/ms/vocab-battle"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://parroto.app/pt/vocab-battle"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://parroto.app/ru/vocab-battle"/>
+        <xhtml:link rel="alternate" hreflang="th" href="https://parroto.app/th/vocab-battle"/>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://parroto.app/tr/vocab-battle"/>
+        <xhtml:link rel="alternate" hreflang="uk" href="https://parroto.app/uk/vocab-battle"/>
+        <xhtml:link rel="alternate" hreflang="vi" href="https://parroto.app/vi/vocab-battle"/>
+        <xhtml:link rel="alternate" hreflang="zh-CN" href="https://parroto.app/zh-CN/vocab-battle"/>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://parroto.app/zh-TW/vocab-battle"/>
+    </url>
+    <url>
+        <loc>https://parroto.app/practice-english-speaking</loc>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://parroto.app/practice-english-speaking"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://parroto.app/practice-english-speaking"/>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://parroto.app/ar/practice-english-speaking"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://parroto.app/de/practice-english-speaking"/>
+        <xhtml:link rel="alternate" hreflang="el" href="https://parroto.app/el/practice-english-speaking"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://parroto.app/es/practice-english-speaking"/>
+        <xhtml:link rel="alternate" hreflang="id" href="https://parroto.app/id/practice-english-speaking"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://parroto.app/ja/practice-english-speaking"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://parroto.app/ko/practice-english-speaking"/>
+        <xhtml:link rel="alternate" hreflang="ms" href="https://parroto.app/ms/practice-english-speaking"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://parroto.app/pt/practice-english-speaking"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://parroto.app/ru/practice-english-speaking"/>
+        <xhtml:link rel="alternate" hreflang="th" href="https://parroto.app/th/practice-english-speaking"/>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://parroto.app/tr/practice-english-speaking"/>
+        <xhtml:link rel="alternate" hreflang="uk" href="https://parroto.app/uk/practice-english-speaking"/>
+        <xhtml:link rel="alternate" hreflang="vi" href="https://parroto.app/vi/practice-english-speaking"/>
+        <xhtml:link rel="alternate" hreflang="zh-CN" href="https://parroto.app/zh-CN/practice-english-speaking"/>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://parroto.app/zh-TW/practice-english-speaking"/>
+    </url>
+    <url>
+        <loc>https://parroto.app/exams/ielts</loc>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://parroto.app/exams/ielts"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://parroto.app/exams/ielts"/>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://parroto.app/ar/exams/ielts"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://parroto.app/de/exams/ielts"/>
+        <xhtml:link rel="alternate" hreflang="el" href="https://parroto.app/el/exams/ielts"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://parroto.app/es/exams/ielts"/>
+        <xhtml:link rel="alternate" hreflang="id" href="https://parroto.app/id/exams/ielts"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://parroto.app/ja/exams/ielts"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://parroto.app/ko/exams/ielts"/>
+        <xhtml:link rel="alternate" hreflang="ms" href="https://parroto.app/ms/exams/ielts"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://parroto.app/pt/exams/ielts"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://parroto.app/ru/exams/ielts"/>
+        <xhtml:link rel="alternate" hreflang="th" href="https://parroto.app/th/exams/ielts"/>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://parroto.app/tr/exams/ielts"/>
+        <xhtml:link rel="alternate" hreflang="uk" href="https://parroto.app/uk/exams/ielts"/>
+        <xhtml:link rel="alternate" hreflang="vi" href="https://parroto.app/vi/exams/ielts"/>
+        <xhtml:link rel="alternate" hreflang="zh-CN" href="https://parroto.app/zh-CN/exams/ielts"/>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://parroto.app/zh-TW/exams/ielts"/>
+    </url>
+    <url>
+        <loc>https://parroto.app/exams/toeic</loc>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://parroto.app/exams/toeic"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://parroto.app/exams/toeic"/>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://parroto.app/ar/exams/toeic"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://parroto.app/de/exams/toeic"/>
+        <xhtml:link rel="alternate" hreflang="el" href="https://parroto.app/el/exams/toeic"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://parroto.app/es/exams/toeic"/>
+        <xhtml:link rel="alternate" hreflang="id" href="https://parroto.app/id/exams/toeic"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://parroto.app/ja/exams/toeic"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://parroto.app/ko/exams/toeic"/>
+        <xhtml:link rel="alternate" hreflang="ms" href="https://parroto.app/ms/exams/toeic"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://parroto.app/pt/exams/toeic"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://parroto.app/ru/exams/toeic"/>
+        <xhtml:link rel="alternate" hreflang="th" href="https://parroto.app/th/exams/toeic"/>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://parroto.app/tr/exams/toeic"/>
+        <xhtml:link rel="alternate" hreflang="uk" href="https://parroto.app/uk/exams/toeic"/>
+        <xhtml:link rel="alternate" hreflang="vi" href="https://parroto.app/vi/exams/toeic"/>
+        <xhtml:link rel="alternate" hreflang="zh-CN" href="https://parroto.app/zh-CN/exams/toeic"/>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://parroto.app/zh-TW/exams/toeic"/>
+    </url>
+</urlset>
