@@ -1,6 +1,6 @@
 # Tiến Độ Dự Án TuanDat (Clone từ Parroto)
 
-Cập nhật lần cuối: `2026-11-13`
+Cập nhật lần cuối: `2026-11-14`
 
 ## 1. Đổi thương hiệu & bộ nhận diện (Icon / Logo / Mascot)
 
@@ -16,9 +16,9 @@ Cập nhật lần cuối: `2026-11-13`
 - [lib/rewrite.mjs](file:///D:/Rea/parroto-clone/lib/rewrite.mjs):
   - Thay thế SVG logo inline cũ (`M28 84C28 53.0721`) bằng `<svg><image href="/assets/images/favicon/logo.png" .../></svg>`.
   - Đổi tên thương hiệu: `"PARROTO COMPANY LIMITED"` -> `"TuanDat"`, `"PARROTO CO., LTD."` -> `"TuanDat"`, `"Parroto"` -> `"TuanDat"`.
-  - Gỡ bỏ các rule chèn `.js?v=...` vào từng tên file JS (vốn làm sai lệch `_buildManifest.js`) và dùng regex trong `rewriteBody` để gắn `?v=tuandat6` cho mọi thuộc tính `src="/_next/static/...js"` và `href="/_next/static/...css"`.
-- [public/_next/static/chunks/main-0f4aa6f53e4508ff.js](file:///D:/Rea/parroto-clone/public/_next/static/chunks/main-0f4aa6f53e4508ff.js): Cập nhật `getDeploymentIdQueryOrEmptyString()` trả về `"?v=tuandat6"` để Next.js route loader tải các chunk kèm query string mới, bỏ qua `immutable` cache cũ trong trình duyệt.
-- [public/_next/static/chunks/webpack-54d8d60c88d47f24.js](file:///D:/Rea/parroto-clone/public/_next/static/chunks/webpack-54d8d60c88d47f24.js): Cập nhật `__webpack_require__.u` nối thêm `"?v=tuandat6"` cho mọi dynamic chunk (`1594`, `5220`, `6197`, v.v.).
+  - Gỡ bỏ các rule chèn `.js?v=...` vào từng tên file JS (vốn làm sai lệch `_buildManifest.js`) và dùng regex trong `rewriteBody` để gắn `?v=tuandat7` cho mọi thuộc tính `src="/_next/static/...js"` và `href="/_next/static/...css"`.
+- [public/_next/static/chunks/main-0f4aa6f53e4508ff.js](file:///D:/Rea/parroto-clone/public/_next/static/chunks/main-0f4aa6f53e4508ff.js): Cập nhật `getDeploymentIdQueryOrEmptyString()` trả về `"?v=tuandat7"` để Next.js route loader tải các chunk kèm query string mới, bỏ qua `immutable` cache cũ trong trình duyệt.
+- [public/_next/static/chunks/webpack-54d8d60c88d47f24.js](file:///D:/Rea/parroto-clone/public/_next/static/chunks/webpack-54d8d60c88d47f24.js): Cập nhật `__webpack_require__.u` nối thêm `"?v=tuandat7"` cho mọi dynamic chunk (`1594`, `5220`, `6197`, v.v.).
 - [public/_next/static/chunks/pages/_app-19a95d9017bc66c2.js](file:///D:/Rea/parroto-clone/public/_next/static/chunks/pages/_app-19a95d9017bc66c2.js): Cập nhật component logo `t.Z` sang ảnh `/assets/images/favicon/logo.png`.
 - [public/_next/static/chunks/pages/lessons/dictation/[lessonSlug]-95806c9eee963a67.js](file:///D:/Rea/parroto-clone/public/_next/static/chunks/pages/lessons/dictation/%5BlessonSlug%5D-95806c9eee963a67.js): Thay `RiveAnimation` bằng `<img src="/assets/images/penguin-mascot.png" ...>`.
 - [public/_next/static/chunks/pages/community-8dbbfaf0fe11f4d4.js](file:///D:/Rea/parroto-clone/public/_next/static/chunks/pages/community-8dbbfaf0fe11f4d4.js): Thay Lottie chim xanh cũ ở sidebar trái `/community` bằng `<img src="/assets/images/penguin-mascot.png" alt="TuanDat" ...>`.
@@ -49,16 +49,34 @@ Chỉ giữ lại các đường dẫn và tính năng trong phạm vi website:
   - [public/_next/static/chunks/pages/link-2162c03737e2d9f9.js](file:///D:/Rea/parroto-clone/public/_next/static/chunks/pages/link-2162c03737e2d9f9.js): Xóa tự động chuyển hướng sang App Store / Google Play và mã QR tải app.
 - **Đồng bộ SSR HTML trong [lib/rewrite.mjs](file:///D:/Rea/parroto-clone/lib/rewrite.mjs)**:
   - Thêm vào `stripExternalHtmlBlocks(text)` các rule lọc nút `<button>...Facebook Community</button>` trên sidebar `/community`, link Facebook trên `/about-us/advisors`, link LinkedIn trên `/authors` và khối QR/tải app trên `/link` (cùng các block tải app, social footer, `footer-social`, link group Facebook, `followUs`, `YouTubeEmbed`, section `/about-us/advisors` trên trang chủ).
-  - Nâng toàn bộ cache-busting `/_next/static/*` và favicon/logo lên `?v=tuandat6`.
+  - Nâng toàn bộ cache-busting `/_next/static/*` và favicon/logo lên `?v=tuandat7`.
 
-## 4. Trạng thái kiểm thử & lưu ý cho phiên sau
+## 4. Loại bỏ hoàn toàn gói Pro, Thanh toán, Affiliate, Khóa nội dung & Giới hạn (Phục vụ miễn phí 100%)
 
-- **Kiểm tra cú pháp JS & quét toàn site**: Tất cả file JS chỉnh sửa đều vượt qua `node --check`; quét 6.317 file HTML sau `rewriteBody` ghi nhận `0` thẻ `<a href=...>` tới Facebook/LinkedIn/TikTok/Threads/App Store/Google Play, `0` nút `Facebook Community`, `0` `apple-download.svg`/`android-download.svg`/`qrcode-parroto`/`YouTubeEmbed`/`Parroto`.
-- **Kiểm tra trình duyệt thực tế** (trên `http://127.0.0.1:4173/vi/community` desktop & mobile, `/vi`, `/vi/link`):
-  - Thương hiệu `TuanDat` và mascot chim cánh cụt `/assets/images/penguin-mascot.png` hiển thị đúng; không còn chữ `Parroto` hay chim xanh cũ.
-  - Không còn banner tải app trên đầu trang, không còn nút `Facebook Community`, không còn video trang chủ hay khối đội ngũ cố vấn chuyên môn, không còn link tải app hay mạng xã hội ở footer/link.
-  - Toàn bộ script Next.js tải với `?v=tuandat6` (HTTP 200 OK).
-- **Trạng thái hiện tại**: Server đang chạy tại `http://127.0.0.1:4173`.
+- **Server & API ([server.mjs](file:///D:/Rea/parroto-clone/server.mjs), [lib/rewrite.mjs](file:///D:/Rea/parroto-clone/lib/rewrite.mjs), `public/api/*`)**:
+  - Chặn và redirect (`302` về `/`, và trả `__N_REDIRECT` cho `_next/data`) đối với các đường dẫn `/pricing`, `/checkout`, `/activation`, `/affiliate` (bao gồm prefix ngôn ngữ như `/vi/...`).
+  - Xóa các file HTML tĩnh tương ứng trong `public/` (`pricing.html`, `checkout.html`, `activation.html`, `affiliate.html` và bản `/vi/`).
+  - Các API thanh toán/gói/giới thiệu (`/api/prices`, `/api/promo/active`, `/api/affiliate`, `/api/orders`, `/api/payment`, `/api/activation`) trả `{"data":[]}`; làm rỗng `public/api/prices.json` và `public/api/promo/active.json`; đưa mọi response API fixture qua `rewriteBody()`.
+  - Chuẩn hóa `"is_pro":true` -> `"is_pro":false`, `"is_free":false` -> `"is_free":true` trong `lib/rewrite.mjs` và `public/api/lessons.*.json`; lọc khỏi SSR HTML các liên kết `/pricing`, `/affiliate`, huy hiệu `bg-gradient-pro`, `ProBadge` (`border-yellow-300`), và style thẻ vàng Pro.
+- **Trạng thái Auth & Modal toàn cục ([public/_next/static/chunks/pages/_app-19a95d9017bc66c2.js](file:///D:/Rea/parroto-clone/public/_next/static/chunks/pages/_app-19a95d9017bc66c2.js))**:
+  - Ép `isPremium` trong `AuthProvider` luôn là `true`, vô hiệu hóa `openCheckoutModal`, `openPremiumRequiredModal`, `openThankYouModal`.
+  - Vô hiệu hóa `CheckoutModal`, `PremiumRequiredModal`, `ThankYouModal`, `EventPromoModal` và `GoogleAdsLoader` (trả `null` và gỡ khỏi `AppContent`).
+- **Điều hướng, Header, Sidebar, Hồ sơ & Trang thanh toán**:
+  - [public/_next/static/chunks/7963-07d6ff3cd7352ba9.js](file:///D:/Rea/parroto-clone/public/_next/static/chunks/7963-07d6ff3cd7352ba9.js) & [public/_next/static/chunks/8874-b7741a5847b900ff.js](file:///D:/Rea/parroto-clone/public/_next/static/chunks/8874-b7741a5847b900ff.js): Xóa `/pricing`, `/affiliate` khỏi menu sidebar và header; xóa các nút `PRO` / `header.unlockPro`; gỡ gọi modal nâng cấp khi `LIMIT_EXCEEDED`.
+  - [public/_next/static/chunks/pages/profile-2b88f9b3b3fc29df.js](file:///D:/Rea/parroto-clone/public/_next/static/chunks/pages/profile-2b88f9b3b3fc29df.js): Xóa nút `/affiliate` và thẻ `premiumStatus` / `premium.unlock`.
+  - [public/_next/static/chunks/pages/terms-of-service-2f479d8a1be18a38.js](file:///D:/Rea/parroto-clone/public/_next/static/chunks/pages/terms-of-service-2f479d8a1be18a38.js): Xóa mục `cancellation.subscription`.
+  - Thay [pricing-c0064e92c949651f.js](file:///D:/Rea/parroto-clone/public/_next/static/chunks/pages/pricing-c0064e92c949651f.js), [checkout-7657d03948bba240.js](file:///D:/Rea/parroto-clone/public/_next/static/chunks/pages/checkout-7657d03948bba240.js), [activation-b3a80283c36c848d.js](file:///D:/Rea/parroto-clone/public/_next/static/chunks/pages/activation-b3a80283c36c848d.js), [affiliate-830c5c02a2067da1.js](file:///D:/Rea/parroto-clone/public/_next/static/chunks/pages/affiliate-830c5c02a2067da1.js) bằng trang chuyển hướng về `/`.
+- **Huy hiệu Pro, Avatar, Nội dung khóa & Giới hạn Free/Pro**:
+  - Vô hiệu hóa `ProBadge` (`return null`) ở các chunk `2323`, `6069`, `7714`, `8450`, `9193`, `9751`, `5247`, `pages/vocabulary`; tắt vương miện Pro trên `UserAvatar` ở [3288.50b343afd6b55f89.js](file:///D:/Rea/parroto-clone/public/_next/static/chunks/3288.50b343afd6b55f89.js) và [9951-0438c4df723a4fcf.js](file:///D:/Rea/parroto-clone/public/_next/static/chunks/9951-0438c4df723a4fcf.js).
+  - Gỡ kiểm tra `is_pro` / `isPro` / `is_free`, viền vàng Pro và nút `duo-pro` trong `1934`, `2323` (bài thi IELTS/TOEIC), `5247` (tạo bài học YouTube), `5554`, `6069`, `7714`, `9193` (mini-game từ vựng), `9751`, `pages/lessons/dictation/[lessonSlug]`, `pages/stories/[slug]`, `pages/vocabulary`, `pages/shorts`.
+  - Hợp nhất hạn mức trong `getVocabularyLimits` và `Ub` (`10` bộ, `250` nhóm, `8e3` thẻ, `5e3` mục); xóa tooltip Free/Pro trong [6974-0a132f4da287f64b.js](file:///D:/Rea/parroto-clone/public/_next/static/chunks/6974-0a132f4da287f64b.js) và banner `saveLimit` / `reviewLimit` kèm nút nâng cấp trong [my-notes-a618637cebd679e2.js](file:///D:/Rea/parroto-clone/public/_next/static/chunks/pages/my-notes-a618637cebd679e2.js) và [my-vocabulary-8b194174d7f50f96.js](file:///D:/Rea/parroto-clone/public/_next/static/chunks/pages/my-vocabulary-8b194174d7f50f96.js).
+
+## 5. Trạng thái kiểm thử & lưu ý cho phiên sau
+
+- **Kiểm tra cú pháp JS & quét toàn site**: Tất cả file JS/MJS đã sửa đều vượt qua `node --check`; quét toàn bộ HTML và JSON trong `public/` qua `rewriteBody()` cho `0` kết quả `href="/pricing"`, `href="/affiliate"`, `bg-gradient-pro`, `"is_pro":true`, `"is_free":false`, `border-yellow-300`, `lucide-crown`.
+- **Kiểm tra HTTP & trình duyệt thực tế** (trên `http://127.0.0.1:4173`):
+  - `/pricing`, `/checkout`, `/activation`, `/affiliate` (và bản `/vi/...`) trả `302 Location: /`; `/api/prices` và `/api/promo/active` trả `{"data":[]}`; `/dictation`, `/vocabulary`, `/stories`, `/exams` tải với `?v=tuandat7` không còn UI/dữ liệu Pro hay thanh toán.
+  - Người dùng đã kiểm tra trực tiếp trên server cục bộ và xác nhận đạt yêu cầu; các thay đổi đã được merge vào `main` (`1c36584`).
+- **Trạng thái hiện tại**: Server đã tắt sau khi kiểm tra, cổng `4173` đã được giải phóng.
 - **Gợi ý việc có thể làm tiếp ở phiên sau (nếu cần)**:
-  - Kiểm tra thêm các trang phụ ít truy cập như `/practice-english-speaking`, `/topics`, `/vocabulary` (vẫn còn chuỗi `apps.apple.com` / `play.google.com` trong chunk JS nếu có modal/nút gợi ý tải app riêng).
-  - Kiểm tra các đường dẫn `/vi`, `/pricing`, `/blog/` trên trình duyệt sau khi khởi động lại server.
+  - Kiểm tra thêm các trang phụ ít truy cập như `/practice-english-speaking`, `/topics` (liên quan dọn link tải app ở bước trước).
