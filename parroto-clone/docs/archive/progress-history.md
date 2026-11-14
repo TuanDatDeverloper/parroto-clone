@@ -131,3 +131,13 @@ Chỉ giữ lại các đường dẫn và tính năng trong phạm vi website:
 - **Chạy `npm run verify` ([data/verify-open.json](../../data/verify-open.json))**:
   - Tổng `6.441` route: `app` `289/289`, `sitemap` `3.910/3.910`, `blog` `1.562/1.562`, `static` `664/680` (`16` route trả `404` là các trang `/<locale>/404`, giảm từ `42` xuống `16` lỗi so với lần verify trước).
   - Đã tắt server cục bộ và xác nhận `git status` chỉ chứa các file cần commit.
+
+## 10. Gỡ bỏ khung QuotaWidget `PRO` sau đăng nhập (`2026-11-15`)
+
+- **Nguyên nhân**: Sau khi đăng nhập (`isAuthenticated = true`), component `CreateCommunityLessonCard` trong [public/_next/static/chunks/5247-0206db5333cd284f.js](../../public/_next/static/chunks/5247-0206db5333cd284f.js) gọi `useCommunityLessonQuota(N && w)` (`/api/community-lessons/quota`) và render `QuotaWidget` hiển thị nhãn `PRO` kèm vương miện (`Còn 999/999`) trên các trang `/shadowing`, `/dictation`, `/topics`, `/community-lessons`.
+- **Thay đổi**:
+  - [public/_next/static/chunks/5247-0206db5333cd284f.js](../../public/_next/static/chunks/5247-0206db5333cd284f.js): Đặt `QuotaWidget` trả về `null`, đổi `useCommunityLessonQuota(N&&w)` thành `useCommunityLessonQuota(!1)` và chặn nhánh render `!1&&A&&!D&&(0,n.jsx)(QuotaWidget,{quota:A})`.
+  - [lib/rewrite.mjs](../../lib/rewrite.mjs), [main-0f4aa6f53e4508ff.js](../../public/_next/static/chunks/main-0f4aa6f53e4508ff.js), [webpack-54d8d60c88d47f24.js](../../public/_next/static/chunks/webpack-54d8d60c88d47f24.js): Nâng cache-busting từ `?v=tuandat12` lên `?v=tuandat13`.
+- **Kiểm thử**:
+  - `node --check` đạt trên các file đã sửa; kiểm tra HTTP và trình duyệt trên `/vi/shadowing`, `/vi/dictation`, `/vi/topics`, `/vi/community-lessons` xác nhận nạp `5247-0206db5333cd284f.js?v=tuandat13` (`200`), không gọi `/api/community-lessons/quota`, không hiển thị khung `PRO`, `0` lỗi console.
+  - Đã tắt server cục bộ và dọn sạch `.env` / `node_modules` tạm trong worktree.

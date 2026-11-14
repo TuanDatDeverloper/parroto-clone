@@ -24,8 +24,8 @@ const TEXT_REWRITES = [
   ["Google veya Apple", "Google"],
   ["Google чи Apple", "Google"],
   ["Google 或 Apple", "Google"],
-  ["/favicon/96x96.png\"", "/favicon/96x96.png?v=tuandat12\""],
-  ["/assets/images/favicon/logo.png\"", "/assets/images/favicon/logo.png?v=tuandat12\""]
+  ["/favicon/96x96.png\"", "/favicon/96x96.png?v=tuandat13\""],
+  ["/assets/images/favicon/logo.png\"", "/assets/images/favicon/logo.png?v=tuandat13\""]
 ];
 
 const NEW_LOGO_IMAGE_MARKUP =
@@ -159,7 +159,7 @@ export function rewriteBody(bodyText) {
     }
   }
   if (result.includes("/_next/static/")) {
-    result = result.replace(/(src|href)="(\/_next\/static\/[^"?]+\.(?:js|css))(?:\?v=[^"]*)?"/g, '$1="$2?v=tuandat12"');
+    result = result.replace(/(src|href)="(\/_next\/static\/[^"?]+\.(?:js|css))(?:\?v=[^"]*)?"/g, '$1="$2?v=tuandat13"');
   }
   return result;
 }
