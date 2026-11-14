@@ -59,15 +59,15 @@ Xem chi tiết từng file tại [PROGRESS.md](./PROGRESS.md):
 
 ## Cách hoạt động
 
-1. **Rewrite khi phục vụ.** `server.mjs` phục vụ tệp tĩnh, fixture API và fallback qua `rewriteBody()` trong `lib/rewrite.mjs` để chuẩn hóa đường dẫn nội bộ (`/assets/...`, `/api/...`, `/podcast/...`), thương hiệu `TuanDat`, trạng thái `"is_pro":false`, và lọc các khối HTML Pro/tải app/mạng xã hội khỏi SSR HTML; đồng thời gắn query `?v=tuandat7` với `Cache-Control: no-cache` để trình duyệt luôn nhận bundle mới.
+1. **Rewrite khi phục vụ.** `server.mjs` phục vụ tệp tĩnh, fixture API và fallback qua `rewriteBody()` trong `lib/rewrite.mjs` để chuẩn hóa đường dẫn nội bộ (`/assets/...`, `/api/...`, `/podcast/...`), thương hiệu `TuanDat`, trạng thái `"is_pro":false`, và lọc các khối HTML Pro/tải app/mạng xã hội khỏi SSR HTML; đồng thời gắn query `?v=tuandat9` với `Cache-Control: no-cache` để trình duyệt luôn nhận bundle mới.
 2. **Chặn route trả phí.** Mọi yêu cầu tới `/pricing`, `/checkout`, `/activation`, `/affiliate` hoặc `_next/data` tương ứng đều được chuyển hướng về `/`.
 3. **Nav phía client.** Next.js tải `_next/data/<buildId>/<locale>/<route>.json` nội bộ để lấy props và bản dịch cho các trang.
-4. **API.** Các endpoint app gọi được phục vụ từ fixture JSON (đã qua `rewriteBody()`); các API giá/khuyến mãi/thanh toán trả `{"data":[]}`. Endpoint chưa chụp trả `404 {"error":"endpoint not captured"}`.
+4. **API & Backend cục bộ.** Các API xác thực (`/api/auth/email`, `/api/auth/google`, `/api/auth/logout`, `/api/auth/session`) và toàn bộ dữ liệu người dùng, hồ sơ, ví kim cương, streak, cấp độ, nhiệm vụ ngày, thông báo, ghi chú câu và từ vựng được `lib/auth-backend.mjs` xử lý động và lưu bền vững tại `data/users.json`. Các API đọc nội dung còn lại phục vụ từ fixture JSON (đã qua `rewriteBody()`); API giá/khuyến mãi/thanh toán trả `{"data":[]}`. Endpoint chưa chụp trả `404 {"error":"endpoint not captured"}`.
 5. **Route ngoài danh mục** được tải từ origin ở lần truy cập đầu (chạy qua `rewriteBody()`) rồi cache vào `public/`.
 
 ## Hạn chế
 
-- Nội dung động cần backend (đăng nhập tài khoản từ xa, bảng xếp hạng sống, lưu tiến độ lên server từ xa) chỉ hoạt động với dữ liệu fixture/cục bộ hiện có.
+- Một số tính năng cộng đồng thời gian thực (bảng xếp hạng trực tiếp, tin nhắn riêng giữa nhiều người dùng từ xa) trả về dữ liệu cục bộ/mặc định thay cho server gốc.
 - Route ngoài danh mục cần Internet cho lần tải đầu; sau đó chạy offline.
 - Âm thanh và video YouTube vẫn phát từ nguồn bên thứ ba.
 

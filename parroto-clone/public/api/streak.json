@@ -1,1 +1,1 @@
-{"status":"error","message":"Unauthorized: No token provided","data":null}
+{"status":"success","message":"OK","data":{"current_streak":7,"longest_streak":7,"freeze_count":2,"has_checked_in_today":true,"last_activity_date":1763096400000,"last_streak_date":1763096400000,"checkin_dates":[]}}

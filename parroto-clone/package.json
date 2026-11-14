@@ -9,5 +9,8 @@
     "data": "node scripts/mirror-data.mjs",
     "serve": "node server.mjs",
     "verify": "node scripts/verify.mjs"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "2.119.0"
   }
 }

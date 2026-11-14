@@ -24,8 +24,8 @@ const TEXT_REWRITES = [
   ["Google veya Apple", "Google"],
   ["Google чи Apple", "Google"],
   ["Google 或 Apple", "Google"],
-  ["/favicon/96x96.png\"", "/favicon/96x96.png?v=tuandat8\""],
-  ["/assets/images/favicon/logo.png\"", "/assets/images/favicon/logo.png?v=tuandat8\""]
+  ["/favicon/96x96.png\"", "/favicon/96x96.png?v=tuandat12\""],
+  ["/assets/images/favicon/logo.png\"", "/assets/images/favicon/logo.png?v=tuandat12\""]
 ];
 
 const NEW_LOGO_IMAGE_MARKUP =
@@ -136,6 +136,9 @@ function stripExternalHtmlBlocks(text) {
   if (result.includes("M17.05 20.28")) {
     result = result.replace(/<button\b[^>]*><svg\b[^>]*><path d="M17\.05 20\.28[^"]*"><\/path><\/svg><span>[^<]*<\/span><\/button>/g, "");
   }
+  if (result.includes("M5.266 9.765")) {
+    result = result.replace(/<button\b[^>]*><svg\b[^>]*><path fill="#EA4335" d="M5\.266 9\.765[\s\S]*?<\/svg><span>[^<]*<\/span><\/button>(?:<div class="relative my-4"><div class="absolute inset-0 flex items-center"><div class="w-full border-t-2 border-border"><\/div><\/div><div class="relative flex justify-center text-xs font-bold uppercase tracking-wider"><span class="bg-card px-3 text-muted-foreground">[^<]*<\/span><\/div><\/div>)?/g, "");
+  }
   return result;
 }
 
@@ -156,7 +159,7 @@ export function rewriteBody(bodyText) {
     }
   }
   if (result.includes("/_next/static/")) {
-    result = result.replace(/(src|href)="(\/_next\/static\/[^"?]+\.(?:js|css))(?:\?v=[^"]*)?"/g, '$1="$2?v=tuandat8"');
+    result = result.replace(/(src|href)="(\/_next\/static\/[^"?]+\.(?:js|css))(?:\?v=[^"]*)?"/g, '$1="$2?v=tuandat12"');
   }
   return result;
 }

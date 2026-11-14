@@ -35,14 +35,14 @@
   "GET /api/posts?page=1&limit=10&sort_by=created_at&sort_order=desc&language=en": "posts.9d8bba89c9.json",
   "GET /api/wallet": {
     "file": "wallet.json",
-    "status": 401
+    "status": 200
   },
   "GET /api/streak": {
     "file": "streak.json",
-    "status": 401
+    "status": 200
   },
   "GET /api/learning-vocabulary/enc/new?deckId=68f46a24b79f2226f4ef9491&groupId=68f47874d398918f2297de84&limit=1000&mode=quiz": {
     "file": "learning-vocabulary/enc/new.b4f9c0e3c2.json",
-    "status": 401
+    "status": 200
   }
 }

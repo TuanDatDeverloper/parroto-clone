@@ -6,10 +6,14 @@ import { contentTypeFor, isTextContentType } from "./lib/mime.mjs";
 import { rewriteBody } from "./lib/rewrite.mjs";
 import { loadApiManifest, resolveApiFallbackPath, resolveApiFixture } from "./lib/api-fixtures.mjs";
 import { fetchOriginTarget } from "./lib/origin-fallback.mjs";
+import { handleAuthAndUserApi } from "./lib/auth-backend.mjs";
+import { loadEnv } from "./lib/supabase.mjs";
 
 const ROOT = process.cwd();
+loadEnv(ROOT);
 const PUBLIC = path.join(ROOT, "public");
 const API_DIR = path.join(PUBLIC, "api");
+const DATA_DIR = path.join(ROOT, "data");
 const portArg = process.argv.find((arg) => arg.startsWith("--port="));
 const PORT = Number(portArg ? portArg.split("=")[1] : process.env.PORT ?? 4173);
 
@@ -66,7 +70,9 @@ async function sendFile(req, res, filePath, { status = 200, rewrite = true } = {
   res.writeHead(status, {
     "content-type": contentType,
     "content-length": payload.length,
-    "cache-control": cachePolicy(filePath)
+    "cache-control": cachePolicy(filePath),
+    "access-control-allow-origin": "*",
+    "access-control-allow-private-network": "true"
   });
   if (req.method === "HEAD") {
     res.end();
@@ -117,6 +123,9 @@ async function handleApi(req, res, url) {
       return;
     }
     res.end(payload);
+    return;
+  }
+  if (await handleAuthAndUserApi(req, res, url, DATA_DIR, PUBLIC)) {
     return;
   }
   const entry = resolveApiFixture(apiManifest, method, url.pathname, url.search) ?? resolveApiFallbackPath(API_DIR, url.pathname);
@@ -171,6 +180,17 @@ async function handleOriginFallback(req, res, url) {
 
 const server = http.createServer(async (req, res) => {
   try {
+    if (req.method === "OPTIONS") {
+      res.writeHead(204, {
+        "access-control-allow-origin": req.headers.origin || "*",
+        "access-control-allow-methods": "GET, POST, PUT, PATCH, DELETE, OPTIONS, HEAD",
+        "access-control-allow-headers": req.headers["access-control-request-headers"] || "Content-Type, Authorization, X-User-Timezone",
+        "access-control-allow-private-network": "true",
+        "access-control-allow-credentials": "true"
+      });
+      res.end();
+      return;
+    }
     const url = new URL(req.url ?? "/", `http://localhost:${PORT}`);
 
     if (BLOCKED_BILLING_DATA_RE.test(url.pathname)) {
