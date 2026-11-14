@@ -10,8 +10,22 @@ const TEXT_REWRITES = [
   ["PARROTO COMPANY LIMITED", "TuanDat"],
   ["PARROTO CO., LTD.", "TuanDat"],
   ["Parroto", "TuanDat"],
-  ["/favicon/96x96.png\"", "/favicon/96x96.png?v=tuandat7\""],
-  ["/assets/images/favicon/logo.png\"", "/assets/images/favicon/logo.png?v=tuandat7\""]
+  ["Google or Apple", "Google"],
+  ["Google hoặc Apple", "Google"],
+  ["Google أو Apple", "Google"],
+  ["Google oder Apple", "Google"],
+  ["Google ή Apple", "Google"],
+  ["Google o Apple", "Google"],
+  ["Google atau Apple", "Google"],
+  ["GoogleまたはApple", "Google"],
+  ["Google 또는 Apple", "Google"],
+  ["Google или Apple", "Google"],
+  ["Google หรือ Apple", "Google"],
+  ["Google veya Apple", "Google"],
+  ["Google чи Apple", "Google"],
+  ["Google 或 Apple", "Google"],
+  ["/favicon/96x96.png\"", "/favicon/96x96.png?v=tuandat8\""],
+  ["/assets/images/favicon/logo.png\"", "/assets/images/favicon/logo.png?v=tuandat8\""]
 ];
 
 const NEW_LOGO_IMAGE_MARKUP =
@@ -119,6 +133,9 @@ function stripExternalHtmlBlocks(text) {
       "text-foreground group-hover:text-primary"
     );
   }
+  if (result.includes("M17.05 20.28")) {
+    result = result.replace(/<button\b[^>]*><svg\b[^>]*><path d="M17\.05 20\.28[^"]*"><\/path><\/svg><span>[^<]*<\/span><\/button>/g, "");
+  }
   return result;
 }
 
@@ -139,7 +156,7 @@ export function rewriteBody(bodyText) {
     }
   }
   if (result.includes("/_next/static/")) {
-    result = result.replace(/(src|href)="(\/_next\/static\/[^"?]+\.(?:js|css))(?:\?v=[^"]*)?"/g, '$1="$2?v=tuandat7"');
+    result = result.replace(/(src|href)="(\/_next\/static\/[^"?]+\.(?:js|css))(?:\?v=[^"]*)?"/g, '$1="$2?v=tuandat8"');
   }
   return result;
 }
