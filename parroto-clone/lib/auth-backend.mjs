@@ -503,6 +503,44 @@ async function ensureProfile(userClient, authUser, extra = {}) {
   return normalizeProfileRow(inserted);
 }
 
+const REFRESH_IN_FLIGHT = new Map();
+const RECENT_REFRESH_CACHE = new Map();
+
+async function refreshSessionCoalesced(anon, refreshToken) {
+  const cached = RECENT_REFRESH_CACHE.get(refreshToken);
+  if (cached && cached.expiresAt > Date.now()) {
+    return cached.result;
+  }
+  const existing = REFRESH_IN_FLIGHT.get(refreshToken);
+  if (existing) {
+    return existing;
+  }
+  const promise = (async () => {
+    const { data, error } = await anon.auth.refreshSession({ refresh_token: refreshToken });
+    const result = !error && data?.session?.access_token && data?.user
+      ? {
+          authUser: data.user,
+          token: data.session.access_token,
+          refreshToken: data.session.refresh_token || refreshToken
+        }
+      : null;
+    if (result) {
+      RECENT_REFRESH_CACHE.set(refreshToken, { result, expiresAt: Date.now() + 5000 });
+      if (RECENT_REFRESH_CACHE.size > 200) {
+        const now = Date.now();
+        for (const [k, v] of RECENT_REFRESH_CACHE) {
+          if (v.expiresAt <= now) RECENT_REFRESH_CACHE.delete(k);
+        }
+      }
+    }
+    return result;
+  })().finally(() => {
+    REFRESH_IN_FLIGHT.delete(refreshToken);
+  });
+  REFRESH_IN_FLIGHT.set(refreshToken, promise);
+  return promise;
+}
+
 async function resolveSession(req) {
   const { accessToken, refreshToken } = extractTokens(req);
   if (!accessToken && !refreshToken) return null;
@@ -525,18 +563,16 @@ async function resolveSession(req) {
   }
 
   if (refreshToken) {
-    const { data, error } = await anon.auth.refreshSession({ refresh_token: refreshToken });
-    if (!error && data?.session?.access_token && data?.user) {
-      const newToken = data.session.access_token;
-      const newRefresh = data.session.refresh_token || refreshToken;
-      const userClient = createUserClient(newToken);
-      const profile = await ensureProfile(userClient, data.user);
+    const refreshed = await refreshSessionCoalesced(anon, refreshToken);
+    if (refreshed) {
+      const userClient = createUserClient(refreshed.token);
+      const profile = await ensureProfile(userClient, refreshed.authUser);
       return {
-        authUser: data.user,
+        authUser: refreshed.authUser,
         userClient,
         profile,
-        token: newToken,
-        refreshedCookies: buildAuthCookies(newToken, newRefresh)
+        token: refreshed.token,
+        refreshedCookies: buildAuthCookies(refreshed.token, refreshed.refreshToken)
       };
     }
   }
@@ -756,14 +792,16 @@ function parseVerificationInput(rawInput) {
       break;
     }
   }
-  if (/^[a-f0-9]{32,}$/i.test(text)) {
+  if (/^(?:pkce_[a-z0-9_-]{16,}|[a-f0-9]{32,})$/i.test(text)) {
     return { kind: "token_hash", tokenHash: text, type: "" };
   }
   return { kind: "otp", token: text.replace(/\s+/g, "") };
 }
 
-async function verifySupabaseEmailAuth(anon, { email = "", rawInput = "", preferredType = "" } = {}) {
-  const parsed = parseVerificationInput(rawInput);
+async function verifySupabaseEmailAuth(anon, { email = "", rawInput = "", tokenHash = "", preferredType = "" } = {}) {
+  const parsed = tokenHash
+    ? { kind: "token_hash", tokenHash: String(tokenHash).trim(), type: preferredType }
+    : parseVerificationInput(rawInput);
   if (parsed.kind === "empty") {
     return { ok: false, status: 400, message: "Verification code or link is required" };
   }
@@ -951,7 +989,7 @@ export async function handleAuthAndUserApi(req, res, url, dataDir, publicDir) {
     } else if (typeof body.token_hash === "string" && body.token_hash.trim()) {
       const result = await verifySupabaseEmailAuth(anon, {
         email: String(body.email || "").trim().toLowerCase(),
-        rawInput: body.token_hash.trim(),
+        tokenHash: body.token_hash.trim(),
         preferredType: typeof body.type === "string" ? body.type.trim() : ""
       });
       if (!result.ok) {

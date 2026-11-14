@@ -109,3 +109,14 @@ Chỉ giữ lại các đường dẫn và tính năng trong phạm vi website:
 - **Kiểm thử & Trạng thái sau phiên**:
   - Đã kiểm tra cú pháp (`node --check`) đạt 100% trên mọi file `.mjs`/`.js`, kiểm tra các API HTTP và quét trình duyệt qua `http://127.0.0.1:4173` (`/login`, `LoginModal` trên `/` và `/dictation`, cùng 11 trang `/dictation`, `/shadowing`, `/shop`, `/community`, `/vocabulary`, `/exams`, `/missions`, `/leaderboard`, `/profile`, `/stories`, `/review`).
   - Server cục bộ đã được tắt sạch sẽ sau khi kiểm tra.
+
+## 8. Kiểm thử End-to-End Đăng nhập Email & Vá lỗi Edge-Case (`2026-11-14`)
+
+- **Sửa lỗi trong [lib/auth-backend.mjs](../../lib/auth-backend.mjs)**:
+  - Truyền tường minh `tokenHash` từ `/api/auth/email/verify-link` vào `verifySupabaseEmailAuth()` và hỗ trợ định dạng `pkce_...` trong `parseVerificationInput()`, tránh việc `token_hash` không phải hex bị hiểu nhầm thành OTP và trả `400 Email and verification code are required`.
+  - Bổ sung `refreshSessionCoalesced()` (`REFRESH_IN_FLIGHT` + `RECENT_REFRESH_CACHE` 5s) trong `resolveSession()` để gộp các request song song khi `access_token` hết hạn, tránh lỗi xoay vòng `token_revoked` trên Supabase Auth.
+- **Kết quả kiểm thử trên `http://127.0.0.1:4173`**:
+  - `node --check` đạt trên `server.mjs` và toàn bộ `lib/*.mjs`.
+  - 16/16 test HTTP API đạt (`/login`, `/vi/login`, `/api/auth/email/send-otp`, `verify-otp`, `verify-link`, `/api/auth/google`, `/api/auth/session`, `/api/auth/me`, `/api/auth/logout`).
+  - Kiểm thử trình duyệt end-to-end với Gmail (`datcline3@gmail.com`): kiểm tra UI `/login`, `/vi/login`, `LoginModal` (không còn nút Google/Apple, không có lỗi React #130), `/login?error_description=Email+link+expired`, gửi OTP thực tế qua SMTP, lấy mã OTP từ email trong Gmail, xác thực thành công, giữ phiên khi reload, truy cập `/dictation` và `/profile`, và đăng xuất sạch sẽ.
+  - Server cục bộ đã được tắt sạch sẽ và kiểm tra `.env` không bị commit (`.gitignore`).
