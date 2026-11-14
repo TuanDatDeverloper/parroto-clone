@@ -120,3 +120,14 @@ Chỉ giữ lại các đường dẫn và tính năng trong phạm vi website:
   - 16/16 test HTTP API đạt (`/login`, `/vi/login`, `/api/auth/email/send-otp`, `verify-otp`, `verify-link`, `/api/auth/google`, `/api/auth/session`, `/api/auth/me`, `/api/auth/logout`).
   - Kiểm thử trình duyệt end-to-end với Gmail (`datcline3@gmail.com`): kiểm tra UI `/login`, `/vi/login`, `LoginModal` (không còn nút Google/Apple, không có lỗi React #130), `/login?error_description=Email+link+expired`, gửi OTP thực tế qua SMTP, lấy mã OTP từ email trong Gmail, xác thực thành công, giữ phiên khi reload, truy cập `/dictation` và `/profile`, và đăng xuất sạch sẽ.
   - Server cục bộ đã được tắt sạch sẽ và kiểm tra `.env` không bị commit (`.gitignore`).
+
+## 9. Đồng bộ README.md, Rà soát Trang phụ & Verify Toàn bộ Route (`2026-11-14`)
+
+- **Cập nhật [README.md](../../README.md)**:
+  - Cập nhật kiến trúc (`lib/supabase.mjs`, `lib/auth-backend.mjs`, `docs/archive/`, `.env.example`), hướng dẫn cấu hình `.env` & chạy `node server.mjs --port=4173`, luồng Supabase Auth Email OTP / Magic Link, PostgreSQL RLS, và `?v=tuandat12`.
+- **Rà soát các trang phụ (`/practice-english-speaking`, `/topics`)**:
+  - Kiểm tra HTML sau `rewriteBody()` và các chunk `practice-english-speaking-41080ec4f6a12938.js`, `topics-edb0698d8eb01236.js`, `topics/[slug]-96b843cc2f8058de.js`: `0` liên kết ngoài/tải app/Pro hiển thị trên DOM (các URL chỉ tồn tại trong metadata JSON-LD).
+  - Kiểm tra trình duyệt trên `/practice-english-speaking`, `/vi/practice-english-speaking`, `/topics`, `/vi/topics` và `/topics/movie-short-clip`: hiển thị đúng thương hiệu `TuanDat`, không có nút tải app/MXH/Pro, không có lỗi trên các trang chính (riêng `/topics/movie-short-clip` gọi `GET /api/lessons` trả `404` do chưa chụp fixture theo topic đó).
+- **Chạy `npm run verify` ([data/verify-open.json](../../data/verify-open.json))**:
+  - Tổng `6.441` route: `app` `289/289`, `sitemap` `3.910/3.910`, `blog` `1.562/1.562`, `static` `664/680` (`16` route trả `404` là các trang `/<locale>/404`, giảm từ `42` xuống `16` lỗi so với lần verify trước).
+  - Đã tắt server cục bộ và xác nhận `git status` chỉ chứa các file cần commit.

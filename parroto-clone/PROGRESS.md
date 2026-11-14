@@ -24,15 +24,14 @@ Cập nhật lần cuối: `2026-11-14` | Lịch sử chi tiết các hạng m�
 - **Server & Rewrite**: Phục vụ tĩnh, proxy fallback origin, rewrite SSR/API, chuyển hướng route trả phí và cache-busting `?v=tuandat12`.
 - **Giao diện sạch & Miễn phí toàn bộ**: Đổi nhận diện `TuanDat`, mở khóa toàn bộ bài học dictation, shadowing, truyện chêm, từ vựng, mini-game, đề thi IELTS/TOEIC và tạo bài học YouTube.
 - **Auth & Backend Supabase**: Đăng nhập/đăng ký qua Email OTP & Magic Link, duy trì/làm mới phiên tự động qua Axios interceptor + cookie phiên (`access_token`, `refresh_token`, chống race condition khi làm mới đồng thời); đầy đủ API hồ sơ, upload avatar/background, ví kim cương, streak, cấp độ, tiến độ bài học, từ vựng, ghi chú câu, shop vật phẩm, nhiệm vụ ngày và thông báo.
-- **Kiểm thử gần nhất**: Vượt qua `node --check`, 16/16 test API xác thực (`/api/auth/email/*`, `/api/auth/session`, `/api/auth/me`, `/api/auth/logout`, `/api/auth/google`), kiểm thử UI (`/login`, `/vi/login`, `LoginModal`), và kiểm thử end-to-end đăng nhập Email OTP thật với Gmail (`datcline3@gmail.com` -> nhận OTP qua SMTP -> xác thực -> giữ phiên khi reload -> truy cập `/dictation`, `/profile` -> đăng xuất).
+- **Kiểm thử gần nhất**:
+  - Vượt qua `node --check`, 16/16 test API xác thực (`/api/auth/email/*`, `/api/auth/session`, `/api/auth/me`, `/api/auth/logout`, `/api/auth/google`), kiểm thử UI (`/login`, `/vi/login`, `LoginModal`), và end-to-end Email OTP thật với Gmail (`datcline3@gmail.com`).
+  - Rà soát `/practice-english-speaking`, `/vi/practice-english-speaking`, `/topics`, `/vi/topics` và `/topics/movie-short-clip` sạch liên kết MXH/tải app/Pro; chạy `npm run verify` trên `6.441` route (`app` `289/289`, `sitemap` `3.910/3.910`, `blog` `1.562/1.562`, `static` `664/680` — `16` route báo `404` là các trang `/<locale>/404`).
 
 ## 3. Lỗi tồn đọng & Tác vụ đang làm dở
 
-- **Tài liệu `README.md` chưa khớp bản mới**: `README.md` vẫn còn mô tả cũ (`?v=tuandat9`, `/api/auth/google`, lưu trữ `data/users.json`).
-- **Trang phụ ít truy cập chưa rà soát kỹ**: `/practice-english-speaking`, `/topics` (liên quan dọn link tải app/MXH ngoài).
-- **Giới hạn hệ thống đã biết**: Bảng xếp hạng trực tiếp và chat riêng nhiều người dùng trả dữ liệu cục bộ/mặc định; audio/video YouTube phụ thuộc bên thứ ba; route ngoài danh mục cần Internet ở lần tải đầu.
+- **Giới hạn hệ thống đã biết**: Bảng xếp hạng trực tiếp và chat riêng nhiều người dùng trả dữ liệu cục bộ/mặc định; một số query fixture chưa mirror (như `/api/lessons?...&topic_slug=movie-short-clip`) trả `404`; audio/video YouTube phụ thuộc bên thứ ba; route ngoài danh mục cần Internet ở lần tải đầu.
 
 ## 4. Kế hoạch các bước tiếp theo
 
-1. Cập nhật [README.md](./README.md) cho đồng bộ với kiến trúc Supabase PostgreSQL, Email OTP/Magic Link và `?v=tuandat12`.
-2. Rà soát nốt các trang phụ (`/practice-english-speaking`, `/topics`) và chạy `npm run verify` kiểm tra toàn bộ route.
+- Hiện toàn bộ hạng mục cốt lõi và kiểm thử đã hoàn tất. Tiếp tục bổ sung fixture hoặc nâng cấp bảng xếp hạng/chat thời gian thực qua Supabase nếu cần mở rộng.
