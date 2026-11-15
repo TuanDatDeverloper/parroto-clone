@@ -64,3 +64,9 @@ Thiết lập đồng bộ icon, favicon, logo và mascot chim cánh cụt cho `
 
 - Đổi tên thư mục dự án, `package.json`, `package-lock.json`, và thông điệp server sang `tuandat-english` (`TuanDat English`).
 - Gỡ bỏ các script và module đồng bộ/fallback bên ngoài; làm sạch toàn bộ dữ liệu tĩnh HTML, JS chunks, API JSON và tài liệu để dự án vận hành hoàn toàn độc lập.
+
+## 7. Gỡ bỏ quảng cáo Baolingo (`2026-11-15`)
+
+- [public/_next/static/chunks/pages/dashboard-2e4aff35c224b098.js](../../public/_next/static/chunks/pages/dashboard-2e4aff35c224b098.js): Gỡ `BaolingoCard`, dữ liệu Lottie kèm theo và khung `<div class="w-full lg+:w-[620px] lg+:flex-shrink-0">` trong `DashboardPage`.
+- [public/dashboard.html](../../public/dashboard.html), [public/vi/dashboard.html](../../public/vi/dashboard.html), [public/missions.html](../../public/missions.html), [public/vi/missions.html](../../public/vi/missions.html), [public/profile.html](../../public/profile.html), [public/vi/profile.html](../../public/vi/profile.html): Xóa khối HTML SSR quảng cáo `https://baolingo.app/` và chuỗi khóa dịch `baolingo` trong `__NEXT_DATA__`.
+- [lib/rewrite.mjs](../../lib/rewrite.mjs): Bổ sung lọc khối quảng cáo `https://baolingo.app/` trong `stripExternalHtmlBlocks()` và nâng cache-busting lên `?v=tuandat14` đồng bộ với [main-0f4aa6f53e4508ff.js](../../public/_next/static/chunks/main-0f4aa6f53e4508ff.js) và [webpack-54d8d60c88d47f24.js](../../public/_next/static/chunks/webpack-54d8d60c88d47f24.js).
