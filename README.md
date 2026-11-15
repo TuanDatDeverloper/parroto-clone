@@ -37,9 +37,10 @@ SUPABASE_PUBLISHABLE_KEY=sb_publishable_your_key
 SITE_URL=http://127.0.0.1:4173
 ```
 
-2. Cài dependency (nếu chưa cài) và khởi chạy server:
+2. Di chuyển vào thư mục `tuandat-english`, cài dependency (nếu chưa cài) và khởi chạy server:
 
 ```bash
+cd tuandat-english
 npm install
 node server.mjs --port=4173
 ```
@@ -48,7 +49,7 @@ Mở `http://127.0.0.1:4173` (hoặc chạy `npm run serve` / `npm start`).
 
 ## Tính năng & Tuỳ chỉnh cốt lõi
 
-Xem chi tiết từng giai đoạn tại [PROGRESS.md](./PROGRESS.md) và [docs/archive/progress-history.md](./docs/archive/progress-history.md):
+Xem chi tiết từng giai đoạn tại [PROGRESS.md](./tuandat-english/PROGRESS.md) và [progress-history.md](./tuandat-english/docs/archive/progress-history.md):
 
 - **Nhận diện thương hiệu `TuanDat`**: Toàn bộ logo, favicon, tên thương hiệu `TuanDat` và mascot chim cánh cụt `/assets/images/penguin-mascot.png`.
 - **Phục vụ miễn phí 100%**:
@@ -75,6 +76,7 @@ Xem chi tiết từng giai đoạn tại [PROGRESS.md](./PROGRESS.md) và [docs/
 ## Kiểm thử
 
 ```bash
+cd tuandat-english
 npm run verify         # kiểm tra toàn bộ route trong data/routes.json trên server cục bộ
 ```
 
