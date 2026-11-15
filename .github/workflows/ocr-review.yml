@@ -1,12 +1,14 @@
 name: Open Code Review
 
-concurrency:
-  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
-  cancel-in-progress: true
-
 on:
   pull_request_target:
     types: [opened, synchronize, reopened]
+  workflow_dispatch:
+    inputs:
+      pr_number:
+        description: Pull request number
+        required: true
+        type: string
 
 permissions:
   contents: read
@@ -14,7 +16,6 @@ permissions:
 
 jobs:
   code-review:
-    if: github.event_name == 'pull_request_target'
     runs-on: ubuntu-latest
     timeout-minutes: 30
     steps:
@@ -26,5 +27,6 @@ jobs:
           llm_auth_token: ${{ secrets.OCR_LLM_AUTH_TOKEN }}
           llm_model: ${{ vars.OCR_LLM_MODEL }}
           llm_use_anthropic: ${{ vars.OCR_LLM_USE_ANTHROPIC }}
+          pr_number: ${{ inputs.pr_number }}
           sticky_summary: 'true'
           upload_artifacts: 'true'
